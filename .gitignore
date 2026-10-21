@@ -1,0 +1,11 @@
+# Godot 4 engine internal files
+.godot/
+*.translation
+
+# Android builds / binaries
+*.apk
+*.aab
+
+# OS junk
+.DS_Store
+Thumbs.db
