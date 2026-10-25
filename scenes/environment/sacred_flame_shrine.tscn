@@ -1,0 +1,345 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Tilemap/tilemap_packed.png" id="1_58ifq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tr24"]
+size = Vector2(32, 24)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_s01i0"]
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_58ifq"]
+offsets = PackedFloat32Array(0, 0.68125)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8tr24"]
+gradient = SubResource("Gradient_58ifq")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_g0fhn"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UncollectedVisuals:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UncollectedVisuals/SacredFlameLight:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DormantFragment:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ophcm"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UncollectedVisuals:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UncollectedVisuals/SacredFlameLight:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DormantFragment:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_diij8"]
+_data = {
+&"collected": SubResource("Animation_g0fhn"),
+&"uncollected": SubResource("Animation_ophcm")
+}
+
+[node name="SacredFlameShrine" type="Node2D" unique_id=405251740]
+metadata/integration_note = "Visual only. VisualStates.play('collected') extinguishes the fragment. Collection, detection, and save state belong to the gameplay system."
+
+[node name="RuinedStonework" type="Node2D" parent="." unique_id=898638742]
+
+[node name="Platform_0_0" type="Sprite2D" parent="RuinedStonework" unique_id=299507883]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(-48, -108)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 144, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_1_0" type="Sprite2D" parent="RuinedStonework" unique_id=1062874501]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(-16, -108)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 144, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_2_0" type="Sprite2D" parent="RuinedStonework" unique_id=1780669372]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(16, -108)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 144, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_0_1" type="Sprite2D" parent="RuinedStonework" unique_id=386565649]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(-48, -76)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 144, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_1_1" type="Sprite2D" parent="RuinedStonework" unique_id=2128212735]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(-16, -76)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 144, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_2_1" type="Sprite2D" parent="RuinedStonework" unique_id=1790344615]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(16, -76)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 144, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_0_2" type="Sprite2D" parent="RuinedStonework" unique_id=1229698892]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(-48, -44)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 160, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_1_2" type="Sprite2D" parent="RuinedStonework" unique_id=1128049827]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(-16, -44)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 160, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Platform_2_2" type="Sprite2D" parent="RuinedStonework" unique_id=2060116722]
+modulate = Color(0.58, 0.66, 0.72, 1)
+texture_filter = 1
+position = Vector2(16, -44)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 160, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="WestPillarFoot" type="Sprite2D" parent="RuinedStonework" unique_id=1873742918]
+modulate = Color(0.57, 0.64, 0.68, 1)
+texture_filter = 1
+position = Vector2(-70, -78)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 128, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="WestBrokenCapital" type="Sprite2D" parent="RuinedStonework" unique_id=584711972]
+modulate = Color(0.65, 0.69, 0.73, 1)
+texture_filter = 1
+position = Vector2(-70, -106)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 128, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="EastPillarFoot" type="Sprite2D" parent="RuinedStonework" unique_id=608171881]
+modulate = Color(0.57, 0.64, 0.68, 1)
+texture_filter = 1
+position = Vector2(40, -78)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 128, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="FallenMasonryA" type="Sprite2D" parent="RuinedStonework" unique_id=1197683721]
+modulate = Color(0.58, 0.63, 0.66, 1)
+texture_filter = 1
+position = Vector2(51, -38)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 160, 8, 6)
+region_filter_clip_enabled = true
+
+[node name="FallenMasonryB" type="Sprite2D" parent="RuinedStonework" unique_id=133931139]
+modulate = Color(0.58, 0.63, 0.66, 1)
+texture_filter = 1
+position = Vector2(-66, -22)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 160, 8, 6)
+region_filter_clip_enabled = true
+
+[node name="CrackA" type="Polygon2D" parent="RuinedStonework" unique_id=434414533]
+position = Vector2(-36, -32)
+color = Color(0.17, 0.22, 0.25, 1)
+polygon = PackedVector2Array(0, 0, 12, 0, 12, 2, 0, 2)
+
+[node name="CrackB" type="Polygon2D" parent="RuinedStonework" unique_id=1791666665]
+position = Vector2(-26, -30)
+color = Color(0.17, 0.22, 0.25, 1)
+polygon = PackedVector2Array(0, 0, 2, 0, 2, 8, 0, 8)
+
+[node name="Pedestal" type="StaticBody2D" parent="." unique_id=1337387279]
+position = Vector2(0, -60)
+collision_mask = 0
+
+[node name="StoneBase" type="Polygon2D" parent="Pedestal" unique_id=841287806]
+position = Vector2(-22, -10)
+color = Color(0.27450982, 0.3254902, 0.36862746, 1)
+polygon = PackedVector2Array(0, 0, 44, 0, 44, 24, 0, 24)
+
+[node name="StoneFront" type="Sprite2D" parent="Pedestal" unique_id=66871000]
+modulate = Color(0.7, 0.76, 0.8, 1)
+texture_filter = 1
+position = Vector2(-16, -12)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 160, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CapShadow" type="Polygon2D" parent="Pedestal" unique_id=1829284473]
+position = Vector2(-24, -15)
+color = Color(0.1882353, 0.23529412, 0.27450982, 1)
+polygon = PackedVector2Array(0, 0, 48, 0, 48, 5, 0, 5)
+
+[node name="Capstone" type="Polygon2D" parent="Pedestal" unique_id=1926897001]
+position = Vector2(-24, -21)
+color = Color(0.6156863, 0.65882355, 0.6784314, 1)
+polygon = PackedVector2Array(0, 0, 48, 0, 48, 8, 0, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestal" unique_id=268661222]
+shape = SubResource("RectangleShape2D_8tr24")
+
+[node name="UncollectedVisuals" type="Node2D" parent="." unique_id=411766022]
+
+[node name="GoldenFragment" type="Sprite2D" parent="UncollectedVisuals" unique_id=475730884]
+modulate = Color(1, 0.86, 0.55, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_s01i0")
+position = Vector2(-16, -112)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 112, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="SacredFlameLight" type="PointLight2D" parent="UncollectedVisuals" unique_id=58625540]
+texture_filter = 2
+position = Vector2(0, -76)
+color = Color(1, 0.7411765, 0.4, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_8tr24")
+texture_scale = 2.0
+
+[node name="DormantFragment" type="Sprite2D" parent="." unique_id=1262345491]
+visible = false
+modulate = Color(0.25, 0.31, 0.37, 1)
+texture_filter = 1
+position = Vector2(-16, -112)
+scale = Vector2(2, 2)
+texture = ExtResource("1_58ifq")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 112, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="VisualStates" type="AnimationPlayer" parent="." unique_id=2014419686]
+libraries/ = SubResource("AnimationLibrary_diij8")
