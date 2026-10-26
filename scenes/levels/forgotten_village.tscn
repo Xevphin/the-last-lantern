@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ct7i5m7o5bqr4" path="res://assets/tilesets/village/Outdoor_tileset.png" id="3_myju2"]
 [ext_resource type="Texture2D" uid="uid://dxvfk8wxftb6p" path="res://assets/tilesets/forgotten_village/cursed_forest_props.png" id="4_08qoc"]
 [ext_resource type="Texture2D" uid="uid://bcypye8e5qw4s" path="res://assets/tilesets/village/Trees_and_bushes.png" id="5_0whti"]
-[ext_resource type="PackedScene" path="res://scenes/environment/sacred_flame_shrine.tscn" id="7_0whti"]
+[ext_resource type="PackedScene" uid="uid://ced5t5ptscnna" path="res://scenes/environment/sacred_flame_shrine.tscn" id="7_0whti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxc1r"]
 size = Vector2(192, 64)
@@ -162,25 +162,28 @@ sources/0 = SubResource("TileSetAtlasSource_uuot7")
 size = Vector2(18, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2isk8"]
-size = Vector2(18, 14)
+size = Vector2(43.5, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffm7t"]
-size = Vector2(18, 14)
+size = Vector2(30, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kw0f"]
-size = Vector2(18, 14)
+size = Vector2(38.5, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnri2"]
-size = Vector2(18, 14)
+size = Vector2(19.5, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wh7jy"]
-size = Vector2(18, 14)
+size = Vector2(41.5, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2kvr"]
-size = Vector2(18, 14)
+size = Vector2(30, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kk60"]
-size = Vector2(18, 14)
+size = Vector2(23, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cluster_trunk"]
+size = Vector2(21.75, 19.703125)
 
 [sub_resource type="Gradient" id="Gradient_myju2"]
 offsets = PackedFloat32Array(0, 0.68125)
@@ -13208,7 +13211,7 @@ color = Color(0.3019608, 0.34509805, 0.2509804, 1)
 polygon = PackedVector2Array(-10, -7, -2, -7, -2, -2, -10, -2)
 
 [node name="TrunkCollision" type="CollisionShape2D" parent="Nature/BareTree_01" unique_id=666153945]
-position = Vector2(0, -3)
+position = Vector2(30, -38)
 shape = SubResource("RectangleShape2D_2isk8")
 
 [node name="CursedTreeArtwork" type="Sprite2D" parent="Nature/BareTree_01" unique_id=1366378676]
@@ -13222,7 +13225,7 @@ region_rect = Rect2(64, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="BareTree_02" type="StaticBody2D" parent="Nature" unique_id=378958064]
-position = Vector2(2369, 200)
+position = Vector2(2368, 191)
 collision_mask = 0
 
 [node name="Shadow" type="Polygon2D" parent="Nature/BareTree_02" unique_id=921955098]
@@ -13261,7 +13264,7 @@ color = Color(0.3019608, 0.34509805, 0.2509804, 1)
 polygon = PackedVector2Array(-10, -7, -2, -7, -2, -2, -10, -2)
 
 [node name="TrunkCollision" type="CollisionShape2D" parent="Nature/BareTree_02" unique_id=852614042]
-position = Vector2(0, -3)
+position = Vector2(-5, -39)
 shape = SubResource("RectangleShape2D_ffm7t")
 
 [node name="CursedTreeArtwork" type="Sprite2D" parent="Nature/BareTree_02" unique_id=408261859]
@@ -13314,7 +13317,7 @@ color = Color(0.3019608, 0.34509805, 0.2509804, 1)
 polygon = PackedVector2Array(-10, -7, -2, -7, -2, -2, -10, -2)
 
 [node name="TrunkCollision" type="CollisionShape2D" parent="Nature/BareTree_03" unique_id=1172537036]
-position = Vector2(0, -3)
+position = Vector2(29.25, -37)
 shape = SubResource("RectangleShape2D_8kw0f")
 
 [node name="CursedTreeArtwork" type="Sprite2D" parent="Nature/BareTree_03" unique_id=1994550912]
@@ -13328,7 +13331,7 @@ region_rect = Rect2(64, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="BareTree_04" type="StaticBody2D" parent="Nature" unique_id=1199077906]
-position = Vector2(2557, 129)
+position = Vector2(2557, 116)
 collision_mask = 0
 
 [node name="Shadow" type="Polygon2D" parent="Nature/BareTree_04" unique_id=1981856522]
@@ -13367,7 +13370,7 @@ color = Color(0.3019608, 0.34509805, 0.2509804, 1)
 polygon = PackedVector2Array(-10, -7, -2, -7, -2, -2, -10, -2)
 
 [node name="TrunkCollision" type="CollisionShape2D" parent="Nature/BareTree_04" unique_id=1993925035]
-position = Vector2(0, -3)
+position = Vector2(-3.75, -18.5)
 shape = SubResource("RectangleShape2D_cnri2")
 
 [node name="CursedTreeArtwork" type="Sprite2D" parent="Nature/BareTree_04" unique_id=917874046]
@@ -13419,7 +13422,7 @@ color = Color(0.3019608, 0.34509805, 0.2509804, 1)
 polygon = PackedVector2Array(-10, -7, -2, -7, -2, -2, -10, -2)
 
 [node name="TrunkCollision" type="CollisionShape2D" parent="Nature/BareTree_05" unique_id=622167595]
-position = Vector2(0, -3)
+position = Vector2(32, -35)
 shape = SubResource("RectangleShape2D_wh7jy")
 
 [node name="CursedTreeArtwork" type="Sprite2D" parent="Nature/BareTree_05" unique_id=1521635401]
@@ -13472,7 +13475,7 @@ color = Color(0.3019608, 0.34509805, 0.2509804, 1)
 polygon = PackedVector2Array(-10, -7, -2, -7, -2, -2, -10, -2)
 
 [node name="TrunkCollision" type="CollisionShape2D" parent="Nature/BareTree_06" unique_id=744380298]
-position = Vector2(0, -3)
+position = Vector2(-5, -42)
 shape = SubResource("RectangleShape2D_r2kvr")
 
 [node name="CursedTreeArtwork" type="Sprite2D" parent="Nature/BareTree_06" unique_id=1945547709]
@@ -13486,7 +13489,7 @@ region_rect = Rect2(0, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="BareTree_07" type="StaticBody2D" parent="Nature" unique_id=923094060]
-position = Vector2(3213, 316)
+position = Vector2(3094, 310)
 collision_mask = 0
 
 [node name="Shadow" type="Polygon2D" parent="Nature/BareTree_07" unique_id=226987041]
@@ -13525,7 +13528,7 @@ color = Color(0.3019608, 0.34509805, 0.2509804, 1)
 polygon = PackedVector2Array(-10, -7, -2, -7, -2, -2, -10, -2)
 
 [node name="TrunkCollision" type="CollisionShape2D" parent="Nature/BareTree_07" unique_id=673599465]
-position = Vector2(0, -3)
+position = Vector2(26, -36)
 shape = SubResource("RectangleShape2D_2kk60")
 
 [node name="CursedTreeArtwork" type="Sprite2D" parent="Nature/BareTree_07" unique_id=1093591098]
@@ -13539,7 +13542,7 @@ region_rect = Rect2(64, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="ThornBush_08" type="Node2D" parent="Nature" unique_id=1795910883]
-position = Vector2(320, 1743)
+position = Vector2(271, 1711)
 
 [node name="Shadow" type="Polygon2D" parent="Nature/ThornBush_08" unique_id=1685628499]
 color = Color(0.06, 0.09, 0.07, 0.38)
@@ -14279,7 +14282,7 @@ color = Color(0.35686275, 0.38431373, 0.35686275, 1)
 polygon = PackedVector2Array(27, 0, 34, 0, 34, 5, 27, 5)
 
 [node name="WeatheredStone_37" type="Node2D" parent="Nature" unique_id=736680720]
-position = Vector2(115, 1819)
+position = Vector2(110, 1814)
 
 [node name="Shadow" type="Polygon2D" parent="Nature/WeatheredStone_37" unique_id=655680810]
 color = Color(0.06, 0.09, 0.07, 0.38)
@@ -14607,7 +14610,14 @@ region_rect = Rect2(48, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_02" type="Node2D" parent="ForestClusters" unique_id=1033328353]
-position = Vector2(389, 275)
+position = Vector2(424, 258)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_02" unique_id=1386320698]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_02/TrunkBody" unique_id=2144478236]
+position = Vector2(-2, -21)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_02" unique_id=1813960238]
 modulate = Color(0.48, 0.56, 0.48, 1)
@@ -14621,7 +14631,14 @@ region_rect = Rect2(96, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_03" type="Node2D" parent="ForestClusters" unique_id=947703126]
-position = Vector2(366, 338)
+position = Vector2(359, 335)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_03" unique_id=821198027]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_03/TrunkBody" unique_id=1463262736]
+position = Vector2(26, -31)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="DeadTree" type="Sprite2D" parent="ForestClusters/ClusterTree_03" unique_id=1766148472]
 modulate = Color(0.83, 0.88, 0.81, 1)
@@ -14649,7 +14666,14 @@ region_rect = Rect2(48, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_05" type="Node2D" parent="ForestClusters" unique_id=494313995]
-position = Vector2(207, 363)
+position = Vector2(204, 360)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_05" unique_id=1511396597]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_05/TrunkBody" unique_id=549209777]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_05" unique_id=704565587]
 modulate = Color(0.48, 0.56, 0.48, 1)
@@ -14691,7 +14715,14 @@ region_rect = Rect2(48, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_08" type="Node2D" parent="ForestClusters" unique_id=1960806877]
-position = Vector2(933, 317)
+position = Vector2(934, 316)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_08" unique_id=1501758064]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_08/TrunkBody" unique_id=296070495]
+position = Vector2(-7.5, -33)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="DeadTree" type="Sprite2D" parent="ForestClusters/ClusterTree_08" unique_id=353211378]
 modulate = Color(0.83, 0.88, 0.81, 1)
@@ -14706,6 +14737,13 @@ region_filter_clip_enabled = true
 
 [node name="ClusterTree_09" type="Node2D" parent="ForestClusters" unique_id=1386068764]
 position = Vector2(1003, 278)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_09" unique_id=1664765448]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_09/TrunkBody" unique_id=1058493079]
+position = Vector2(2, -29)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_09" unique_id=74624821]
 modulate = Color(0.48, 0.56, 0.48, 1)
@@ -14733,7 +14771,7 @@ region_rect = Rect2(96, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_11" type="Node2D" parent="ForestClusters" unique_id=1873809463]
-position = Vector2(834, 263)
+position = Vector2(853, 222)
 
 [node name="DeadTree" type="Sprite2D" parent="ForestClusters/ClusterTree_11" unique_id=2005534678]
 modulate = Color(0.83, 0.88, 0.81, 1)
@@ -14776,6 +14814,13 @@ region_filter_clip_enabled = true
 
 [node name="ClusterTree_14" type="Node2D" parent="ForestClusters" unique_id=1031111646]
 position = Vector2(1059, 287)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_14" unique_id=1124162590]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_14/TrunkBody" unique_id=961553964]
+position = Vector2(-2, -34)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="DeadTree" type="Sprite2D" parent="ForestClusters/ClusterTree_14" unique_id=890468289]
 modulate = Color(0.83, 0.88, 0.81, 1)
@@ -14859,7 +14904,14 @@ region_rect = Rect2(64, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_20" type="Node2D" parent="ForestClusters" unique_id=1871720053]
-position = Vector2(2610, 267)
+position = Vector2(2634, 273)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_20" unique_id=1871248302]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_20/TrunkBody" unique_id=1119818587]
+position = Vector2(1, -20)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_20" unique_id=1744638225]
 modulate = Color(0.48, 0.56, 0.48, 1)
@@ -14889,6 +14941,13 @@ region_filter_clip_enabled = true
 [node name="ClusterTree_22" type="Node2D" parent="ForestClusters" unique_id=63884482]
 position = Vector2(2519, 269)
 
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_22" unique_id=571388096]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_22/TrunkBody" unique_id=554874626]
+position = Vector2(-4, -38)
+shape = SubResource("RectangleShape2D_cluster_trunk")
+
 [node name="DeadTree" type="Sprite2D" parent="ForestClusters/ClusterTree_22" unique_id=1775613040]
 modulate = Color(0.83, 0.88, 0.81, 1)
 texture_filter = 1
@@ -14903,6 +14962,13 @@ region_filter_clip_enabled = true
 [node name="ClusterTree_23" type="Node2D" parent="ForestClusters" unique_id=960860234]
 position = Vector2(2420, 307)
 
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_23" unique_id=535773295]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_23/TrunkBody" unique_id=1225500690]
+position = Vector2(2, -21)
+shape = SubResource("RectangleShape2D_cluster_trunk")
+
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_23" unique_id=1733879232]
 modulate = Color(0.48, 0.56, 0.48, 1)
 texture_filter = 1
@@ -14915,7 +14981,7 @@ region_rect = Rect2(48, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_24" type="Node2D" parent="ForestClusters" unique_id=643720562]
-position = Vector2(3217, 222)
+position = Vector2(3220, 221)
 
 [node name="DeadTree" type="Sprite2D" parent="ForestClusters/ClusterTree_24" unique_id=316707785]
 modulate = Color(0.83, 0.88, 0.81, 1)
@@ -14987,6 +15053,13 @@ region_filter_clip_enabled = true
 [node name="ClusterTree_29" type="Node2D" parent="ForestClusters" unique_id=1949618673]
 position = Vector2(3263, 333)
 
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_29" unique_id=1315206653]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_29/TrunkBody" unique_id=617968125]
+position = Vector2(-2.125, -20.851563)
+shape = SubResource("RectangleShape2D_cluster_trunk")
+
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_29" unique_id=1865842199]
 modulate = Color(0.48, 0.56, 0.48, 1)
 texture_filter = 1
@@ -15013,7 +15086,14 @@ region_rect = Rect2(0, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_31" type="Node2D" parent="ForestClusters" unique_id=1760603420]
-position = Vector2(3143, 314)
+position = Vector2(3152, 306)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_31" unique_id=1464323951]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_31/TrunkBody" unique_id=1772863986]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_31" unique_id=1893526328]
 modulate = Color(0.48, 0.56, 0.48, 1)
@@ -15069,7 +15149,14 @@ region_rect = Rect2(96, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_35" type="Node2D" parent="ForestClusters" unique_id=1344649403]
-position = Vector2(362, 914)
+position = Vector2(408, 921)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_35" unique_id=1525040093]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_35/TrunkBody" unique_id=1855491483]
+position = Vector2(2, -23)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_35" unique_id=1368056131]
 modulate = Color(0.63, 0.65, 0.49, 1)
@@ -15183,6 +15270,13 @@ region_filter_clip_enabled = true
 [node name="ClusterTree_43" type="Node2D" parent="ForestClusters" unique_id=1037170751]
 position = Vector2(3225, 1367)
 
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_43" unique_id=1328832078]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_43/TrunkBody" unique_id=293941522]
+position = Vector2(1, -23)
+shape = SubResource("RectangleShape2D_cluster_trunk")
+
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_43" unique_id=481089555]
 modulate = Color(0.63, 0.65, 0.49, 1)
 texture_filter = 1
@@ -15237,7 +15331,14 @@ region_rect = Rect2(0, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="ClusterTree_47" type="Node2D" parent="ForestClusters" unique_id=534732997]
-position = Vector2(3219, 1448)
+position = Vector2(3219, 1444)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_47" unique_id=1340807292]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_47/TrunkBody" unique_id=895150373]
+position = Vector2(2, -36)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_47" unique_id=1972873915]
 modulate = Color(0.63, 0.65, 0.49, 1)
@@ -15252,6 +15353,13 @@ region_filter_clip_enabled = true
 
 [node name="ClusterTree_48" type="Node2D" parent="ForestClusters" unique_id=1244500937]
 position = Vector2(217, 1618)
+
+[node name="TrunkBody" type="StaticBody2D" parent="ForestClusters/ClusterTree_48" unique_id=1471991646]
+collision_mask = 0
+
+[node name="TrunkCollision" type="CollisionShape2D" parent="ForestClusters/ClusterTree_48/TrunkBody" unique_id=578926895]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_cluster_trunk")
 
 [node name="Canopy" type="Sprite2D" parent="ForestClusters/ClusterTree_48" unique_id=1049889385]
 modulate = Color(0.63, 0.65, 0.49, 1)

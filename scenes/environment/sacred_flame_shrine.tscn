@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://ced5t5ptscnna"]
 
-[ext_resource type="Texture2D" path="res://assets/Tilemap/tilemap_packed.png" id="1_58ifq"]
+[ext_resource type="Texture2D" uid="uid://dfkf5js5lcsfp" path="res://assets/Tilemap/tilemap_packed.png" id="1_58ifq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tr24"]
 size = Vector2(32, 24)
