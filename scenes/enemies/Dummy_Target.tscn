@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://2e7x6c8c3eyg"]
+
+[ext_resource type="Script" uid="uid://21e4gnsso220" path="res://scenes/enemies/Dummy_Target.gd" id="1_0vjml"]
+[ext_resource type="Texture2D" uid="uid://230ma4h1e3ra" path="res://icon.svg" id="2_nufni"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+
+[node name="DummyTarget" type="Area2D" unique_id=2081211854 groups=["enemy_hurtbox"]]
+position = Vector2(380, 180)
+script = ExtResource("1_0vjml")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=441677696]
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=626162788]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_nufni")

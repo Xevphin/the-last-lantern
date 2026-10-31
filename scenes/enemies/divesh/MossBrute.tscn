@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/enemies/divesh/moss_brute.gd" id="1_o8o4y"]
+
+[ext_resource type="Texture2D" path="res://assets/characters/shadow_wanderer.svg" id="art"]
+
+[sub_resource type="CanvasItemMaterial" id="CharacterMaterial"]
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_g76lr"]
+offsets = PackedFloat32Array(0, 0)
+colors = PackedColorArray(0.31764707, 0.27058825, 0.40392157, 1, 0.3254902, 0.14901961, 0.6509804, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3et4t"]
+gradient = SubResource("Gradient_g76lr")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgtxa"]
+size = Vector2(28, 28)
+
+[node name="MossBrute" type="Node2D" unique_id=880787973]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=468438261]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_o8o4y")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1342061762]
+material = SubResource("CharacterMaterial")
+position = Vector2(0, -12)
+scale = Vector2(1, 1)
+texture = ExtResource("art")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=464927747]
+shape = SubResource("RectangleShape2D_xgtxa")
+
+
+[node name="Hurtbox" type="Area2D" parent="CharacterBody2D" groups=["enemy_hurtbox"]]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Hurtbox"]
+shape = SubResource("RectangleShape2D_xgtxa")

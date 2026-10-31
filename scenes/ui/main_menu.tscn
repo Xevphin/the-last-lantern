@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://b1clsjsku6bok"]
+
+[ext_resource type="Script" uid="uid://c0uspveds6qqm" path="res://scenes/ui/main_menu.gd" id="1_sl1te"]
+
+[ext_resource type="Texture2D" path="res://assets/ui/backgrounds/dungeon_corridor.png" id="background"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87aya"]
+bg_color = Color(0.101960786, 0.14117648, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7882353, 0.6431373, 0.36078432, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl1te"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1kxf"]
+bg_color = Color(0.27450982, 0.3254902, 0.41568628, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.8901961, 0.627451, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe2o3"]
+bg_color = Color(0.1882353, 0.26666668, 0.3529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g8jr"]
+bg_color = Color(0.1882353, 0.26666668, 0.3529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[node name="Main Menu" type="Control" unique_id=780372018]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sl1te")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("background")
+expand_mode = 1
+stretch_mode = 6
+modulate = Color(0.65, 0.65, 0.75, 1)
+
+[node name="Game Title" type="Label" parent="." unique_id=1375483669]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 1152.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_font_sizes/font_size = 64
+text = "THE LAST LANTERN"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=410293683]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 280.0
+offset_right = 726.0
+offset_bottom = 340.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.7607843, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_sl1te")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m1kxf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fe2o3")
+text = "START GAME"
+
+[node name="SettingsButton" type="Button" parent="." unique_id=1927748365]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 365.0
+offset_right = 726.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.7607843, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m1kxf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1g8jr")
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1081924279]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 450.0
+offset_right = 726.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.7607843, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m1kxf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fe2o3")
+text = "QUIT"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

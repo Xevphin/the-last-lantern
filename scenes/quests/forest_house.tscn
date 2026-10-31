@@ -1,0 +1,32 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://assets/Tilemap/tilemap_packed.png" id="art"]
+[sub_resource type="RectangleShape2D" id="Body"]
+size = Vector2(256,112)
+[node name="ForestHouse" type="Node2D"]
+[node name="Building" type="StaticBody2D" parent="."]
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building"]
+shape = SubResource("Body")
+[node name="Artwork" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0,-32)
+scale = Vector2(4,4)
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,64,64,48)
+modulate = Color(0.72,0.65,0.58,1)
+[node name="Door" type="Polygon2D" parent="."]
+position = Vector2(0,40)
+color = Color(0.04,0.035,0.025,1)
+polygon = PackedVector2Array(-16,-32,16,-32,16,16,-16,16)
+[node name="Step" type="Polygon2D" parent="."]
+position = Vector2(0,60)
+color = Color(0.35,0.33,0.28,1)
+polygon = PackedVector2Array(-24,-4,24,-4,24,4,-24,4)
+[node name="Overgrowth" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-108,44)
+scale = Vector2(2,2)
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,32,16,16)

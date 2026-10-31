@@ -1,0 +1,2332 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://assets/tilesets/village/Outdoor_tileset.png" id="art"]
+[node name="HouseTrails" type="Node2D"]
+z_index = -2
+[node name="Dirt_0" type="Sprite2D" parent="."]
+position = Vector2(280,1016)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_1" type="Sprite2D" parent="."]
+position = Vector2(280,1032)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_1" type="Sprite2D" parent="."]
+position = Vector2(280,1031)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_2" type="Sprite2D" parent="."]
+position = Vector2(280,1048)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_3" type="Sprite2D" parent="."]
+position = Vector2(280,1064)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_4" type="Sprite2D" parent="."]
+position = Vector2(280,1080)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_5" type="Sprite2D" parent="."]
+position = Vector2(280,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_6" type="Sprite2D" parent="."]
+position = Vector2(280,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_6" type="Sprite2D" parent="."]
+position = Vector2(282,1108)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_7" type="Sprite2D" parent="."]
+position = Vector2(280,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_7" type="Sprite2D" parent="."]
+position = Vector2(279,1127)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_8" type="Sprite2D" parent="."]
+position = Vector2(296,1016)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_9" type="Sprite2D" parent="."]
+position = Vector2(296,1032)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_9" type="Sprite2D" parent="."]
+position = Vector2(295,1036)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_10" type="Sprite2D" parent="."]
+position = Vector2(296,1048)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_11" type="Sprite2D" parent="."]
+position = Vector2(296,1064)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_12" type="Sprite2D" parent="."]
+position = Vector2(296,1080)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_13" type="Sprite2D" parent="."]
+position = Vector2(296,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_14" type="Sprite2D" parent="."]
+position = Vector2(296,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_15" type="Sprite2D" parent="."]
+position = Vector2(296,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_15" type="Sprite2D" parent="."]
+position = Vector2(298,1129)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_16" type="Sprite2D" parent="."]
+position = Vector2(312,1016)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_17" type="Sprite2D" parent="."]
+position = Vector2(312,1032)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_18" type="Sprite2D" parent="."]
+position = Vector2(312,1048)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_19" type="Sprite2D" parent="."]
+position = Vector2(312,1064)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_19" type="Sprite2D" parent="."]
+position = Vector2(314,1061)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_20" type="Sprite2D" parent="."]
+position = Vector2(312,1080)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_21" type="Sprite2D" parent="."]
+position = Vector2(312,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_22" type="Sprite2D" parent="."]
+position = Vector2(312,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_23" type="Sprite2D" parent="."]
+position = Vector2(312,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_23" type="Sprite2D" parent="."]
+position = Vector2(315,1132)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_24" type="Sprite2D" parent="."]
+position = Vector2(312,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_24" type="Sprite2D" parent="."]
+position = Vector2(314,1141)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_25" type="Sprite2D" parent="."]
+position = Vector2(328,1016)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_26" type="Sprite2D" parent="."]
+position = Vector2(328,1032)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_27" type="Sprite2D" parent="."]
+position = Vector2(328,1048)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_28" type="Sprite2D" parent="."]
+position = Vector2(328,1064)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_29" type="Sprite2D" parent="."]
+position = Vector2(328,1080)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_30" type="Sprite2D" parent="."]
+position = Vector2(328,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_31" type="Sprite2D" parent="."]
+position = Vector2(328,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_31" type="Sprite2D" parent="."]
+position = Vector2(327,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_32" type="Sprite2D" parent="."]
+position = Vector2(328,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_33" type="Sprite2D" parent="."]
+position = Vector2(328,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_34" type="Sprite2D" parent="."]
+position = Vector2(344,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_35" type="Sprite2D" parent="."]
+position = Vector2(344,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_36" type="Sprite2D" parent="."]
+position = Vector2(344,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_37" type="Sprite2D" parent="."]
+position = Vector2(344,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_38" type="Sprite2D" parent="."]
+position = Vector2(360,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_38" type="Sprite2D" parent="."]
+position = Vector2(361,1095)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_39" type="Sprite2D" parent="."]
+position = Vector2(360,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_40" type="Sprite2D" parent="."]
+position = Vector2(360,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_41" type="Sprite2D" parent="."]
+position = Vector2(360,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_42" type="Sprite2D" parent="."]
+position = Vector2(376,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_42" type="Sprite2D" parent="."]
+position = Vector2(374,1100)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_43" type="Sprite2D" parent="."]
+position = Vector2(376,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_44" type="Sprite2D" parent="."]
+position = Vector2(376,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_44" type="Sprite2D" parent="."]
+position = Vector2(378,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_45" type="Sprite2D" parent="."]
+position = Vector2(376,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_46" type="Sprite2D" parent="."]
+position = Vector2(392,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_47" type="Sprite2D" parent="."]
+position = Vector2(392,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_48" type="Sprite2D" parent="."]
+position = Vector2(392,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_49" type="Sprite2D" parent="."]
+position = Vector2(392,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_50" type="Sprite2D" parent="."]
+position = Vector2(408,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_51" type="Sprite2D" parent="."]
+position = Vector2(408,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_52" type="Sprite2D" parent="."]
+position = Vector2(408,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_52" type="Sprite2D" parent="."]
+position = Vector2(409,1130)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_53" type="Sprite2D" parent="."]
+position = Vector2(408,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_54" type="Sprite2D" parent="."]
+position = Vector2(424,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_55" type="Sprite2D" parent="."]
+position = Vector2(424,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_56" type="Sprite2D" parent="."]
+position = Vector2(424,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_57" type="Sprite2D" parent="."]
+position = Vector2(424,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_58" type="Sprite2D" parent="."]
+position = Vector2(440,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_59" type="Sprite2D" parent="."]
+position = Vector2(440,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_60" type="Sprite2D" parent="."]
+position = Vector2(440,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_61" type="Sprite2D" parent="."]
+position = Vector2(440,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_62" type="Sprite2D" parent="."]
+position = Vector2(456,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_63" type="Sprite2D" parent="."]
+position = Vector2(456,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_64" type="Sprite2D" parent="."]
+position = Vector2(456,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_65" type="Sprite2D" parent="."]
+position = Vector2(456,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_66" type="Sprite2D" parent="."]
+position = Vector2(472,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_67" type="Sprite2D" parent="."]
+position = Vector2(472,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_68" type="Sprite2D" parent="."]
+position = Vector2(472,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_69" type="Sprite2D" parent="."]
+position = Vector2(472,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_70" type="Sprite2D" parent="."]
+position = Vector2(488,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_71" type="Sprite2D" parent="."]
+position = Vector2(488,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_72" type="Sprite2D" parent="."]
+position = Vector2(488,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_72" type="Sprite2D" parent="."]
+position = Vector2(484,1125)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_73" type="Sprite2D" parent="."]
+position = Vector2(488,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_73" type="Sprite2D" parent="."]
+position = Vector2(486,1146)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_74" type="Sprite2D" parent="."]
+position = Vector2(504,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_75" type="Sprite2D" parent="."]
+position = Vector2(504,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_76" type="Sprite2D" parent="."]
+position = Vector2(504,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_77" type="Sprite2D" parent="."]
+position = Vector2(504,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_78" type="Sprite2D" parent="."]
+position = Vector2(520,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_79" type="Sprite2D" parent="."]
+position = Vector2(520,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_80" type="Sprite2D" parent="."]
+position = Vector2(520,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_81" type="Sprite2D" parent="."]
+position = Vector2(520,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_82" type="Sprite2D" parent="."]
+position = Vector2(536,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_82" type="Sprite2D" parent="."]
+position = Vector2(540,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_83" type="Sprite2D" parent="."]
+position = Vector2(536,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_84" type="Sprite2D" parent="."]
+position = Vector2(536,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_85" type="Sprite2D" parent="."]
+position = Vector2(536,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_86" type="Sprite2D" parent="."]
+position = Vector2(552,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_86" type="Sprite2D" parent="."]
+position = Vector2(548,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_87" type="Sprite2D" parent="."]
+position = Vector2(552,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_88" type="Sprite2D" parent="."]
+position = Vector2(552,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_89" type="Sprite2D" parent="."]
+position = Vector2(552,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_90" type="Sprite2D" parent="."]
+position = Vector2(568,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_90" type="Sprite2D" parent="."]
+position = Vector2(568,1116)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_91" type="Sprite2D" parent="."]
+position = Vector2(568,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_92" type="Sprite2D" parent="."]
+position = Vector2(568,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_92" type="Sprite2D" parent="."]
+position = Vector2(566,1148)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_93" type="Sprite2D" parent="."]
+position = Vector2(568,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_94" type="Sprite2D" parent="."]
+position = Vector2(584,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_95" type="Sprite2D" parent="."]
+position = Vector2(584,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_96" type="Sprite2D" parent="."]
+position = Vector2(584,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_97" type="Sprite2D" parent="."]
+position = Vector2(584,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_98" type="Sprite2D" parent="."]
+position = Vector2(600,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_98" type="Sprite2D" parent="."]
+position = Vector2(601,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_99" type="Sprite2D" parent="."]
+position = Vector2(600,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_100" type="Sprite2D" parent="."]
+position = Vector2(600,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_101" type="Sprite2D" parent="."]
+position = Vector2(600,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_102" type="Sprite2D" parent="."]
+position = Vector2(616,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_102" type="Sprite2D" parent="."]
+position = Vector2(619,1109)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_103" type="Sprite2D" parent="."]
+position = Vector2(616,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_104" type="Sprite2D" parent="."]
+position = Vector2(616,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_105" type="Sprite2D" parent="."]
+position = Vector2(616,1160)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_105" type="Sprite2D" parent="."]
+position = Vector2(619,1164)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_106" type="Sprite2D" parent="."]
+position = Vector2(632,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_106" type="Sprite2D" parent="."]
+position = Vector2(636,1098)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_107" type="Sprite2D" parent="."]
+position = Vector2(632,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_108" type="Sprite2D" parent="."]
+position = Vector2(632,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_109" type="Sprite2D" parent="."]
+position = Vector2(632,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_110" type="Sprite2D" parent="."]
+position = Vector2(648,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_111" type="Sprite2D" parent="."]
+position = Vector2(648,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_112" type="Sprite2D" parent="."]
+position = Vector2(648,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_113" type="Sprite2D" parent="."]
+position = Vector2(648,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_114" type="Sprite2D" parent="."]
+position = Vector2(664,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_115" type="Sprite2D" parent="."]
+position = Vector2(664,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_116" type="Sprite2D" parent="."]
+position = Vector2(664,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_117" type="Sprite2D" parent="."]
+position = Vector2(664,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_118" type="Sprite2D" parent="."]
+position = Vector2(680,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_118" type="Sprite2D" parent="."]
+position = Vector2(676,1100)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_119" type="Sprite2D" parent="."]
+position = Vector2(680,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_120" type="Sprite2D" parent="."]
+position = Vector2(680,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_121" type="Sprite2D" parent="."]
+position = Vector2(680,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_121" type="Sprite2D" parent="."]
+position = Vector2(676,1143)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_122" type="Sprite2D" parent="."]
+position = Vector2(696,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_122" type="Sprite2D" parent="."]
+position = Vector2(692,1097)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_123" type="Sprite2D" parent="."]
+position = Vector2(696,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_123" type="Sprite2D" parent="."]
+position = Vector2(695,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_124" type="Sprite2D" parent="."]
+position = Vector2(696,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_125" type="Sprite2D" parent="."]
+position = Vector2(696,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_126" type="Sprite2D" parent="."]
+position = Vector2(712,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_126" type="Sprite2D" parent="."]
+position = Vector2(715,1095)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_127" type="Sprite2D" parent="."]
+position = Vector2(712,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_128" type="Sprite2D" parent="."]
+position = Vector2(712,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_129" type="Sprite2D" parent="."]
+position = Vector2(712,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_130" type="Sprite2D" parent="."]
+position = Vector2(728,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_130" type="Sprite2D" parent="."]
+position = Vector2(730,1097)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_131" type="Sprite2D" parent="."]
+position = Vector2(728,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_132" type="Sprite2D" parent="."]
+position = Vector2(728,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_133" type="Sprite2D" parent="."]
+position = Vector2(728,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_134" type="Sprite2D" parent="."]
+position = Vector2(744,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_135" type="Sprite2D" parent="."]
+position = Vector2(744,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_136" type="Sprite2D" parent="."]
+position = Vector2(744,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_136" type="Sprite2D" parent="."]
+position = Vector2(746,1129)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_137" type="Sprite2D" parent="."]
+position = Vector2(744,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_138" type="Sprite2D" parent="."]
+position = Vector2(760,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_138" type="Sprite2D" parent="."]
+position = Vector2(759,1095)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_139" type="Sprite2D" parent="."]
+position = Vector2(760,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_140" type="Sprite2D" parent="."]
+position = Vector2(760,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_140" type="Sprite2D" parent="."]
+position = Vector2(758,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_141" type="Sprite2D" parent="."]
+position = Vector2(760,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_142" type="Sprite2D" parent="."]
+position = Vector2(776,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_143" type="Sprite2D" parent="."]
+position = Vector2(776,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_143" type="Sprite2D" parent="."]
+position = Vector2(780,1109)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_144" type="Sprite2D" parent="."]
+position = Vector2(776,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_144" type="Sprite2D" parent="."]
+position = Vector2(780,1124)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_145" type="Sprite2D" parent="."]
+position = Vector2(776,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_146" type="Sprite2D" parent="."]
+position = Vector2(792,1096)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_147" type="Sprite2D" parent="."]
+position = Vector2(792,1112)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_148" type="Sprite2D" parent="."]
+position = Vector2(792,1128)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_148" type="Sprite2D" parent="."]
+position = Vector2(795,1131)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_149" type="Sprite2D" parent="."]
+position = Vector2(792,1144)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_150" type="Sprite2D" parent="."]
+position = Vector2(1096,296)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_151" type="Sprite2D" parent="."]
+position = Vector2(1096,312)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_151" type="Sprite2D" parent="."]
+position = Vector2(1098,308)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_152" type="Sprite2D" parent="."]
+position = Vector2(1096,328)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_153" type="Sprite2D" parent="."]
+position = Vector2(1096,344)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_154" type="Sprite2D" parent="."]
+position = Vector2(1096,360)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_155" type="Sprite2D" parent="."]
+position = Vector2(1096,376)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_156" type="Sprite2D" parent="."]
+position = Vector2(1096,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_157" type="Sprite2D" parent="."]
+position = Vector2(1096,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_158" type="Sprite2D" parent="."]
+position = Vector2(1096,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_159" type="Sprite2D" parent="."]
+position = Vector2(1112,296)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_160" type="Sprite2D" parent="."]
+position = Vector2(1112,312)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_161" type="Sprite2D" parent="."]
+position = Vector2(1112,328)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_161" type="Sprite2D" parent="."]
+position = Vector2(1112,327)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_162" type="Sprite2D" parent="."]
+position = Vector2(1112,344)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_163" type="Sprite2D" parent="."]
+position = Vector2(1112,360)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_164" type="Sprite2D" parent="."]
+position = Vector2(1112,376)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_165" type="Sprite2D" parent="."]
+position = Vector2(1112,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_166" type="Sprite2D" parent="."]
+position = Vector2(1112,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_166" type="Sprite2D" parent="."]
+position = Vector2(1115,412)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_167" type="Sprite2D" parent="."]
+position = Vector2(1112,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_168" type="Sprite2D" parent="."]
+position = Vector2(1128,296)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_169" type="Sprite2D" parent="."]
+position = Vector2(1128,312)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_169" type="Sprite2D" parent="."]
+position = Vector2(1132,309)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_170" type="Sprite2D" parent="."]
+position = Vector2(1128,328)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_171" type="Sprite2D" parent="."]
+position = Vector2(1128,344)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_171" type="Sprite2D" parent="."]
+position = Vector2(1125,343)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_172" type="Sprite2D" parent="."]
+position = Vector2(1128,360)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_173" type="Sprite2D" parent="."]
+position = Vector2(1128,376)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_174" type="Sprite2D" parent="."]
+position = Vector2(1128,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_175" type="Sprite2D" parent="."]
+position = Vector2(1128,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_176" type="Sprite2D" parent="."]
+position = Vector2(1128,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_176" type="Sprite2D" parent="."]
+position = Vector2(1125,426)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_177" type="Sprite2D" parent="."]
+position = Vector2(1128,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_178" type="Sprite2D" parent="."]
+position = Vector2(1144,296)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_179" type="Sprite2D" parent="."]
+position = Vector2(1144,312)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_180" type="Sprite2D" parent="."]
+position = Vector2(1144,328)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_181" type="Sprite2D" parent="."]
+position = Vector2(1144,344)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_182" type="Sprite2D" parent="."]
+position = Vector2(1144,360)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_183" type="Sprite2D" parent="."]
+position = Vector2(1144,376)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_184" type="Sprite2D" parent="."]
+position = Vector2(1144,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_184" type="Sprite2D" parent="."]
+position = Vector2(1144,395)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_185" type="Sprite2D" parent="."]
+position = Vector2(1144,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_186" type="Sprite2D" parent="."]
+position = Vector2(1144,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_187" type="Sprite2D" parent="."]
+position = Vector2(1144,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_187" type="Sprite2D" parent="."]
+position = Vector2(1147,437)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_188" type="Sprite2D" parent="."]
+position = Vector2(1160,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_188" type="Sprite2D" parent="."]
+position = Vector2(1159,396)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_189" type="Sprite2D" parent="."]
+position = Vector2(1160,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_190" type="Sprite2D" parent="."]
+position = Vector2(1160,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_191" type="Sprite2D" parent="."]
+position = Vector2(1160,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_192" type="Sprite2D" parent="."]
+position = Vector2(1176,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_193" type="Sprite2D" parent="."]
+position = Vector2(1176,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_194" type="Sprite2D" parent="."]
+position = Vector2(1176,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_194" type="Sprite2D" parent="."]
+position = Vector2(1180,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_195" type="Sprite2D" parent="."]
+position = Vector2(1176,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_196" type="Sprite2D" parent="."]
+position = Vector2(1192,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_197" type="Sprite2D" parent="."]
+position = Vector2(1192,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_198" type="Sprite2D" parent="."]
+position = Vector2(1192,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_198" type="Sprite2D" parent="."]
+position = Vector2(1196,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_199" type="Sprite2D" parent="."]
+position = Vector2(1192,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_200" type="Sprite2D" parent="."]
+position = Vector2(1208,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_200" type="Sprite2D" parent="."]
+position = Vector2(1206,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_201" type="Sprite2D" parent="."]
+position = Vector2(1208,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_201" type="Sprite2D" parent="."]
+position = Vector2(1205,412)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_202" type="Sprite2D" parent="."]
+position = Vector2(1208,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_202" type="Sprite2D" parent="."]
+position = Vector2(1208,423)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_203" type="Sprite2D" parent="."]
+position = Vector2(1208,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_204" type="Sprite2D" parent="."]
+position = Vector2(1224,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_205" type="Sprite2D" parent="."]
+position = Vector2(1224,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_206" type="Sprite2D" parent="."]
+position = Vector2(1224,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_207" type="Sprite2D" parent="."]
+position = Vector2(1224,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_208" type="Sprite2D" parent="."]
+position = Vector2(1240,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_209" type="Sprite2D" parent="."]
+position = Vector2(1240,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_210" type="Sprite2D" parent="."]
+position = Vector2(1240,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_210" type="Sprite2D" parent="."]
+position = Vector2(1242,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_211" type="Sprite2D" parent="."]
+position = Vector2(1240,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_211" type="Sprite2D" parent="."]
+position = Vector2(1241,438)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_212" type="Sprite2D" parent="."]
+position = Vector2(1256,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_213" type="Sprite2D" parent="."]
+position = Vector2(1256,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_214" type="Sprite2D" parent="."]
+position = Vector2(1256,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_215" type="Sprite2D" parent="."]
+position = Vector2(1256,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_216" type="Sprite2D" parent="."]
+position = Vector2(1272,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_217" type="Sprite2D" parent="."]
+position = Vector2(1272,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_217" type="Sprite2D" parent="."]
+position = Vector2(1269,422)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_218" type="Sprite2D" parent="."]
+position = Vector2(1272,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_219" type="Sprite2D" parent="."]
+position = Vector2(1272,456)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_220" type="Sprite2D" parent="."]
+position = Vector2(1288,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_221" type="Sprite2D" parent="."]
+position = Vector2(1288,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_221" type="Sprite2D" parent="."]
+position = Vector2(1286,420)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_222" type="Sprite2D" parent="."]
+position = Vector2(1288,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_223" type="Sprite2D" parent="."]
+position = Vector2(1288,456)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_224" type="Sprite2D" parent="."]
+position = Vector2(1304,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_225" type="Sprite2D" parent="."]
+position = Vector2(1304,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_226" type="Sprite2D" parent="."]
+position = Vector2(1304,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_227" type="Sprite2D" parent="."]
+position = Vector2(1304,456)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_228" type="Sprite2D" parent="."]
+position = Vector2(1320,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_229" type="Sprite2D" parent="."]
+position = Vector2(1320,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_229" type="Sprite2D" parent="."]
+position = Vector2(1324,426)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_230" type="Sprite2D" parent="."]
+position = Vector2(1320,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_231" type="Sprite2D" parent="."]
+position = Vector2(1320,456)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_232" type="Sprite2D" parent="."]
+position = Vector2(1336,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_233" type="Sprite2D" parent="."]
+position = Vector2(1336,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_234" type="Sprite2D" parent="."]
+position = Vector2(1336,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_234" type="Sprite2D" parent="."]
+position = Vector2(1334,442)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_235" type="Sprite2D" parent="."]
+position = Vector2(1336,456)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_235" type="Sprite2D" parent="."]
+position = Vector2(1337,458)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_236" type="Sprite2D" parent="."]
+position = Vector2(1352,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_237" type="Sprite2D" parent="."]
+position = Vector2(1352,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_238" type="Sprite2D" parent="."]
+position = Vector2(1352,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_239" type="Sprite2D" parent="."]
+position = Vector2(1352,456)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_240" type="Sprite2D" parent="."]
+position = Vector2(1368,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_241" type="Sprite2D" parent="."]
+position = Vector2(1368,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_241" type="Sprite2D" parent="."]
+position = Vector2(1364,411)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_242" type="Sprite2D" parent="."]
+position = Vector2(1368,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_243" type="Sprite2D" parent="."]
+position = Vector2(1368,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_244" type="Sprite2D" parent="."]
+position = Vector2(1384,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_245" type="Sprite2D" parent="."]
+position = Vector2(1384,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_246" type="Sprite2D" parent="."]
+position = Vector2(1384,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_247" type="Sprite2D" parent="."]
+position = Vector2(1384,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_248" type="Sprite2D" parent="."]
+position = Vector2(1400,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_248" type="Sprite2D" parent="."]
+position = Vector2(1399,394)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_249" type="Sprite2D" parent="."]
+position = Vector2(1400,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_250" type="Sprite2D" parent="."]
+position = Vector2(1400,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_251" type="Sprite2D" parent="."]
+position = Vector2(1400,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_252" type="Sprite2D" parent="."]
+position = Vector2(1416,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_253" type="Sprite2D" parent="."]
+position = Vector2(1416,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_254" type="Sprite2D" parent="."]
+position = Vector2(1416,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_255" type="Sprite2D" parent="."]
+position = Vector2(1416,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_256" type="Sprite2D" parent="."]
+position = Vector2(1432,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_257" type="Sprite2D" parent="."]
+position = Vector2(1432,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_258" type="Sprite2D" parent="."]
+position = Vector2(1432,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_258" type="Sprite2D" parent="."]
+position = Vector2(1432,422)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_259" type="Sprite2D" parent="."]
+position = Vector2(1432,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_260" type="Sprite2D" parent="."]
+position = Vector2(1448,392)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_261" type="Sprite2D" parent="."]
+position = Vector2(1448,408)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Grass_261" type="Sprite2D" parent="."]
+position = Vector2(1450,409)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(0,0,16,16)
+scale = Vector2(0.35,0.35)
+modulate = Color(0.7,0.8,0.65,0.8)
+[node name="Dirt_262" type="Sprite2D" parent="."]
+position = Vector2(1448,424)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)
+[node name="Dirt_263" type="Sprite2D" parent="."]
+position = Vector2(1448,440)
+texture_filter = 1
+texture = ExtResource("art")
+region_enabled = true
+region_rect = Rect2(64,16,16,16)
+modulate = Color(0.72,0.72,0.62,1)

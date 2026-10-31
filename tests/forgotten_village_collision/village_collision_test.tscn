@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bib7rgiyvjlbe"]
+
+[ext_resource type="PackedScene" uid="uid://bphuq38h3oyy7" path="res://scenes/levels/forgotten_village.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://tests/forgotten_village_collision/test_character.tscn" id="2"]
+[ext_resource type="Script" uid="uid://crf6chkcgfgqr" path="res://tests/forgotten_village_collision/village_collision_test.gd" id="3"]
+
+[node name="VillageCollisionTest" type="Node2D" unique_id=644687268]
+script = ExtResource("3")
+
+[node name="ForgottenVillage" parent="." unique_id=1154680282 instance=ExtResource("1")]
+
+[node name="TestCharacter" parent="." unique_id=379078371 instance=ExtResource("2")]

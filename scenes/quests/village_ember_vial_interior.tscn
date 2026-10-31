@@ -1,0 +1,1008 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="game_2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="game_3"]
+[ext_resource type="PackedScene" path="res://scenes/ui/setting_menu.tscn" id="game_4"]
+[ext_resource type="Script" path="res://scenes/quests/forest_quest_level.gd" id="game_5"]
+[ext_resource type="Script" path="res://scenes/levels/forgotten_village.gd" id="game_6"]
+[ext_resource type="Script" path="res://scenes/quests/forest_interaction.gd" id="interaction"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/village/House_tileset.png" id="wood"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/village/Furniture.png" id="furniture"]
+[ext_resource type="Texture2D" path="res://assets/Tilemap/tilemap_packed.png" id="atlas"]
+[sub_resource type="CircleShape2D" id="ForestRange"]
+radius = 64.0
+[sub_resource type="RectangleShape2D" id="Horizontal"]
+size = Vector2(832,32)
+[sub_resource type="RectangleShape2D" id="Vertical"]
+size = Vector2(32,512)
+[sub_resource type="RectangleShape2D" id="FurnitureBody"]
+size = Vector2(80,48)
+[sub_resource type="Gradient" id="Fade"]
+colors = PackedColorArray(1,1,1,1,1,1,1,0)
+[sub_resource type="GradientTexture2D" id="LightTexture"]
+gradient = SubResource("Fade")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5,0.5)
+fill_to = Vector2(1,0.5)
+[node name="village_ember_vial_interior" type="Node2D"]
+script = ExtResource("game_6")
+[node name="Backdrop" type="Polygon2D" parent="."]
+z_index = -10
+color = Color(0.025,0.028,0.035,1)
+polygon = PackedVector2Array(-4096,-4096,4096,-4096,4096,4096,-4096,4096)
+[node name="Floor" type="Node2D" parent="."]
+[node name="Board_0_0" type="Sprite2D" parent="Floor"]
+position = Vector2(80,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_0" type="Sprite2D" parent="Floor"]
+position = Vector2(144,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_0" type="Sprite2D" parent="Floor"]
+position = Vector2(208,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_0" type="Sprite2D" parent="Floor"]
+position = Vector2(272,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_0" type="Sprite2D" parent="Floor"]
+position = Vector2(336,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_0" type="Sprite2D" parent="Floor"]
+position = Vector2(400,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_0" type="Sprite2D" parent="Floor"]
+position = Vector2(464,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_0" type="Sprite2D" parent="Floor"]
+position = Vector2(528,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_0" type="Sprite2D" parent="Floor"]
+position = Vector2(592,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_0" type="Sprite2D" parent="Floor"]
+position = Vector2(656,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_0" type="Sprite2D" parent="Floor"]
+position = Vector2(720,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_0" type="Sprite2D" parent="Floor"]
+position = Vector2(784,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_0" type="Sprite2D" parent="Floor"]
+position = Vector2(848,80)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_0_1" type="Sprite2D" parent="Floor"]
+position = Vector2(80,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_1" type="Sprite2D" parent="Floor"]
+position = Vector2(144,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_1" type="Sprite2D" parent="Floor"]
+position = Vector2(208,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_1" type="Sprite2D" parent="Floor"]
+position = Vector2(272,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_1" type="Sprite2D" parent="Floor"]
+position = Vector2(336,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_1" type="Sprite2D" parent="Floor"]
+position = Vector2(400,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_1" type="Sprite2D" parent="Floor"]
+position = Vector2(464,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_1" type="Sprite2D" parent="Floor"]
+position = Vector2(528,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_1" type="Sprite2D" parent="Floor"]
+position = Vector2(592,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_1" type="Sprite2D" parent="Floor"]
+position = Vector2(656,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_1" type="Sprite2D" parent="Floor"]
+position = Vector2(720,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_1" type="Sprite2D" parent="Floor"]
+position = Vector2(784,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_1" type="Sprite2D" parent="Floor"]
+position = Vector2(848,144)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_0_2" type="Sprite2D" parent="Floor"]
+position = Vector2(80,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_2" type="Sprite2D" parent="Floor"]
+position = Vector2(144,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_2" type="Sprite2D" parent="Floor"]
+position = Vector2(208,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_2" type="Sprite2D" parent="Floor"]
+position = Vector2(272,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_2" type="Sprite2D" parent="Floor"]
+position = Vector2(336,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_2" type="Sprite2D" parent="Floor"]
+position = Vector2(400,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_2" type="Sprite2D" parent="Floor"]
+position = Vector2(464,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_2" type="Sprite2D" parent="Floor"]
+position = Vector2(528,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_2" type="Sprite2D" parent="Floor"]
+position = Vector2(592,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_2" type="Sprite2D" parent="Floor"]
+position = Vector2(656,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_2" type="Sprite2D" parent="Floor"]
+position = Vector2(720,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_2" type="Sprite2D" parent="Floor"]
+position = Vector2(784,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_2" type="Sprite2D" parent="Floor"]
+position = Vector2(848,208)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_0_3" type="Sprite2D" parent="Floor"]
+position = Vector2(80,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_3" type="Sprite2D" parent="Floor"]
+position = Vector2(144,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_3" type="Sprite2D" parent="Floor"]
+position = Vector2(208,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_3" type="Sprite2D" parent="Floor"]
+position = Vector2(272,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_3" type="Sprite2D" parent="Floor"]
+position = Vector2(336,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_3" type="Sprite2D" parent="Floor"]
+position = Vector2(400,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_3" type="Sprite2D" parent="Floor"]
+position = Vector2(464,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_3" type="Sprite2D" parent="Floor"]
+position = Vector2(528,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_3" type="Sprite2D" parent="Floor"]
+position = Vector2(592,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_3" type="Sprite2D" parent="Floor"]
+position = Vector2(656,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_3" type="Sprite2D" parent="Floor"]
+position = Vector2(720,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_3" type="Sprite2D" parent="Floor"]
+position = Vector2(784,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_3" type="Sprite2D" parent="Floor"]
+position = Vector2(848,272)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_0_4" type="Sprite2D" parent="Floor"]
+position = Vector2(80,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_4" type="Sprite2D" parent="Floor"]
+position = Vector2(144,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_4" type="Sprite2D" parent="Floor"]
+position = Vector2(208,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_4" type="Sprite2D" parent="Floor"]
+position = Vector2(272,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_4" type="Sprite2D" parent="Floor"]
+position = Vector2(336,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_4" type="Sprite2D" parent="Floor"]
+position = Vector2(400,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_4" type="Sprite2D" parent="Floor"]
+position = Vector2(464,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_4" type="Sprite2D" parent="Floor"]
+position = Vector2(528,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_4" type="Sprite2D" parent="Floor"]
+position = Vector2(592,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_4" type="Sprite2D" parent="Floor"]
+position = Vector2(656,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_4" type="Sprite2D" parent="Floor"]
+position = Vector2(720,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_4" type="Sprite2D" parent="Floor"]
+position = Vector2(784,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_4" type="Sprite2D" parent="Floor"]
+position = Vector2(848,336)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_0_5" type="Sprite2D" parent="Floor"]
+position = Vector2(80,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_5" type="Sprite2D" parent="Floor"]
+position = Vector2(144,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_5" type="Sprite2D" parent="Floor"]
+position = Vector2(208,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_5" type="Sprite2D" parent="Floor"]
+position = Vector2(272,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_5" type="Sprite2D" parent="Floor"]
+position = Vector2(336,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_5" type="Sprite2D" parent="Floor"]
+position = Vector2(400,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_5" type="Sprite2D" parent="Floor"]
+position = Vector2(464,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_5" type="Sprite2D" parent="Floor"]
+position = Vector2(528,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_5" type="Sprite2D" parent="Floor"]
+position = Vector2(592,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_5" type="Sprite2D" parent="Floor"]
+position = Vector2(656,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_5" type="Sprite2D" parent="Floor"]
+position = Vector2(720,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_5" type="Sprite2D" parent="Floor"]
+position = Vector2(784,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_5" type="Sprite2D" parent="Floor"]
+position = Vector2(848,400)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_0_6" type="Sprite2D" parent="Floor"]
+position = Vector2(80,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_6" type="Sprite2D" parent="Floor"]
+position = Vector2(144,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_6" type="Sprite2D" parent="Floor"]
+position = Vector2(208,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_6" type="Sprite2D" parent="Floor"]
+position = Vector2(272,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_6" type="Sprite2D" parent="Floor"]
+position = Vector2(336,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_6" type="Sprite2D" parent="Floor"]
+position = Vector2(400,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_6" type="Sprite2D" parent="Floor"]
+position = Vector2(464,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_6" type="Sprite2D" parent="Floor"]
+position = Vector2(528,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_6" type="Sprite2D" parent="Floor"]
+position = Vector2(592,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_6" type="Sprite2D" parent="Floor"]
+position = Vector2(656,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_6" type="Sprite2D" parent="Floor"]
+position = Vector2(720,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_6" type="Sprite2D" parent="Floor"]
+position = Vector2(784,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_6" type="Sprite2D" parent="Floor"]
+position = Vector2(848,464)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_0_7" type="Sprite2D" parent="Floor"]
+position = Vector2(80,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_1_7" type="Sprite2D" parent="Floor"]
+position = Vector2(144,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_2_7" type="Sprite2D" parent="Floor"]
+position = Vector2(208,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_3_7" type="Sprite2D" parent="Floor"]
+position = Vector2(272,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_4_7" type="Sprite2D" parent="Floor"]
+position = Vector2(336,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_5_7" type="Sprite2D" parent="Floor"]
+position = Vector2(400,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_6_7" type="Sprite2D" parent="Floor"]
+position = Vector2(464,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_7_7" type="Sprite2D" parent="Floor"]
+position = Vector2(528,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_8_7" type="Sprite2D" parent="Floor"]
+position = Vector2(592,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_9_7" type="Sprite2D" parent="Floor"]
+position = Vector2(656,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_10_7" type="Sprite2D" parent="Floor"]
+position = Vector2(720,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_11_7" type="Sprite2D" parent="Floor"]
+position = Vector2(784,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="Board_12_7" type="Sprite2D" parent="Floor"]
+position = Vector2(848,528)
+texture_filter = 1
+scale = Vector2(4,4)
+texture = ExtResource("wood")
+region_enabled = true
+region_rect = Rect2(16,16,16,16)
+modulate = Color(0.55,0.48,0.4,1)
+[node name="North" type="StaticBody2D" parent="."]
+position = Vector2(464,48)
+collision_mask = 0
+[node name="WallArt" type="Polygon2D" parent="North"]
+color = Color(0.22,0.18,0.14,1)
+polygon = PackedVector2Array(-416,-16,416,-16,416,16,-416,16)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="North"]
+shape = SubResource("Horizontal")
+[node name="South" type="StaticBody2D" parent="."]
+position = Vector2(464,560)
+collision_mask = 0
+[node name="WallArt" type="Polygon2D" parent="South"]
+color = Color(0.22,0.18,0.14,1)
+polygon = PackedVector2Array(-416,-16,416,-16,416,16,-416,16)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="South"]
+shape = SubResource("Horizontal")
+[node name="West" type="StaticBody2D" parent="."]
+position = Vector2(48,304)
+collision_mask = 0
+[node name="WallArt" type="Polygon2D" parent="West"]
+color = Color(0.22,0.18,0.14,1)
+polygon = PackedVector2Array(-16,-256,16,-256,16,256,-16,256)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="West"]
+shape = SubResource("Vertical")
+[node name="East" type="StaticBody2D" parent="."]
+position = Vector2(880,304)
+collision_mask = 0
+[node name="WallArt" type="Polygon2D" parent="East"]
+color = Color(0.22,0.18,0.14,1)
+polygon = PackedVector2Array(-16,-256,16,-256,16,256,-16,256)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="East"]
+shape = SubResource("Vertical")
+[node name="Bed" type="StaticBody2D" parent="."]
+position = Vector2(200,200)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+shape = SubResource("FurnitureBody")
+[node name="Art" type="Sprite2D" parent="Bed"]
+texture_filter = 1
+position = Vector2(0,-16)
+scale = Vector2(3,3)
+texture = ExtResource("furniture")
+region_enabled = true
+region_rect = Rect2(144,0,16,32)
+[node name="Table" type="StaticBody2D" parent="."]
+position = Vector2(464,220)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+shape = SubResource("FurnitureBody")
+[node name="Art" type="Sprite2D" parent="Table"]
+texture_filter = 1
+position = Vector2(0,-16)
+scale = Vector2(3,3)
+texture = ExtResource("furniture")
+region_enabled = true
+region_rect = Rect2(40,0,32,32)
+[node name="Bookshelf" type="StaticBody2D" parent="."]
+position = Vector2(720,180)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookshelf"]
+shape = SubResource("FurnitureBody")
+[node name="Art" type="Sprite2D" parent="Bookshelf"]
+texture_filter = 1
+position = Vector2(0,-16)
+scale = Vector2(3,3)
+texture = ExtResource("furniture")
+region_enabled = true
+region_rect = Rect2(160,0,16,32)
+[node name="Chair" type="StaticBody2D" parent="."]
+position = Vector2(560,300)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair"]
+shape = SubResource("FurnitureBody")
+[node name="Art" type="Sprite2D" parent="Chair"]
+texture_filter = 1
+position = Vector2(0,-16)
+scale = Vector2(3,3)
+texture = ExtResource("furniture")
+region_enabled = true
+region_rect = Rect2(0,32,16,16)
+[node name="Night" type="CanvasModulate" parent="."]
+color = Color(0.42,0.40,0.38,1)
+[node name="Lantern" type="PointLight2D" parent="."]
+position = Vector2(464,220)
+texture = SubResource("LightTexture")
+texture_scale = 5.0
+color = Color(1,0.78,0.46,1)
+energy = 0.8
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(464,480)
+[node name="DoorMat" type="Polygon2D" parent="."]
+color = Color(0.45,0.25,0.13,1)
+polygon = PackedVector2Array(416,496,512,496,512,540,416,540)
+[node name="Discovery" type="Area2D" parent="."]
+position = Vector2(464,280)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("interaction")
+shrine_title = "Ember Vial"
+kind = "treasure"
+treasure_id = "ember_vial"
+destination = ""
+arrival_marker = ""
+[node name="Range" type="CollisionShape2D" parent="Discovery"]
+shape = SubResource("ForestRange")
+[node name="Icon" type="Sprite2D" parent="Discovery"]
+position = Vector2(0,-48)
+texture_filter = 1
+scale = Vector2(2,2)
+texture = ExtResource("atlas")
+region_enabled = true
+region_rect = Rect2(144,112,16,16)
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(464,520)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("interaction")
+shrine_title = "Return to Forgotten Village"
+kind = "door"
+destination = "res://scenes/levels/forgotten_village.tscn"
+arrival_marker = "MainStreetWestReturn"
+[node name="Range" type="CollisionShape2D" parent="Exit"]
+shape = SubResource("ForestRange")
+[node name="Player" parent="." instance=ExtResource("game_2")]
+[node name="PauseUI" type="CanvasLayer" parent="."]
+layer = 2
+[node name="PauseMenu" parent="PauseUI" instance=ExtResource("game_3")]
+visible = false
+[node name="SettingMenu" parent="PauseUI" instance=ExtResource("game_4")]
+visible = false
+[node name="MobileUI" type="CanvasLayer" parent="."]
+[node name="PauseButton" type="Button" parent="MobileUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_right = -20.0
+offset_bottom = 80.0
+text = "Ⅱ"
+[node name="Quest" type="Node2D" parent="."]
+script = ExtResource("game_5")
+area = "village_house"
+[connection signal="pressed" from="MobileUI/PauseButton" to="." method="_on_pause_button_pressed"]

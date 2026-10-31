@@ -1,8 +1,15 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene format=3 uid="uid://bte2ehbjjq7ka"]
 
-[ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://assets/ui/hud/heart_filled.svg" id="2_heart"]
-[ext_resource type="Texture2D" path="res://assets/Tilemap/tilemap_packed.png" id="3_atlas"]
+[ext_resource type="Script" uid="uid://blynjckqbif0j" path="res://scenes/ui/game_hud.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ccip20j03obw0" path="res://assets/ui/hud/heart_filled.svg" id="2_heart"]
+[ext_resource type="Texture2D" uid="uid://dfkf5js5lcsfp" path="res://assets/Tilemap/tilemap_packed.png" id="3_atlas"]
+
+[sub_resource type="Theme" id="Theme_hud"]
+default_font_size = 10
+Label/colors/font_color = Color(0.91, 0.86, 0.75, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.6)
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.035, 0.045, 0.07, 0.94)
@@ -31,18 +38,12 @@ atlas = ExtResource("3_atlas")
 region = Rect2(144, 112, 16, 16)
 filter_clip = true
 
-[sub_resource type="Theme" id="Theme_hud"]
-default_font_size = 10
-Label/colors/font_color = Color(0.91, 0.86, 0.75, 1)
-Label/colors/font_shadow_color = Color(0, 0, 0, 0.6)
-Label/constants/shadow_offset_x = 1
-Label/constants/shadow_offset_y = 1
-
-[node name="GameHUD" type="CanvasLayer"]
+[node name="GameHUD" type="CanvasLayer" unique_id=1049706823]
 layer = 20
 script = ExtResource("1_script")
 
-[node name="ScreenRoot" type="Control" parent="."]
+[node name="ScreenRoot" type="Control" parent="." unique_id=258120810]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,25 +51,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture_filter = 1
 theme = SubResource("Theme_hud")
 
-[node name="PixelLayout" type="Control" parent="ScreenRoot"]
-layout_mode = 0
+[node name="PixelLayout" type="Control" parent="ScreenRoot" unique_id=214550888]
+anchors_preset = 0
 offset_left = 12.0
 offset_top = 12.0
 offset_right = 628.0
 offset_bottom = 348.0
 mouse_filter = 2
 
-[node name="VitalsPanel" type="PanelContainer" parent="ScreenRoot/PixelLayout"]
+[node name="VitalsPanel" type="PanelContainer" parent="ScreenRoot/PixelLayout" unique_id=1921005403]
 layout_mode = 0
 offset_right = 164.0
 offset_bottom = 60.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="Margin" type="MarginContainer" parent="ScreenRoot/PixelLayout/VitalsPanel"]
+[node name="Margin" type="MarginContainer" parent="ScreenRoot/PixelLayout/VitalsPanel" unique_id=1242257143]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 9
@@ -76,17 +76,17 @@ theme_override_constants/margin_top = 7
 theme_override_constants/margin_right = 9
 theme_override_constants/margin_bottom = 7
 
-[node name="Vitals" type="VBoxContainer" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin"]
+[node name="Vitals" type="VBoxContainer" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin" unique_id=2028176366]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 4
 
-[node name="Hearts" type="HBoxContainer" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals"]
+[node name="Hearts" type="HBoxContainer" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals" unique_id=1486433414]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 4
 
-[node name="Heart1" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts"]
+[node name="Heart1" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts" unique_id=2100126090]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -94,7 +94,7 @@ texture = ExtResource("2_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart2" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts"]
+[node name="Heart2" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts" unique_id=1982540787]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -102,7 +102,7 @@ texture = ExtResource("2_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart3" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts"]
+[node name="Heart3" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts" unique_id=1405466301]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -110,7 +110,7 @@ texture = ExtResource("2_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart4" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts"]
+[node name="Heart4" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts" unique_id=429381542]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -118,7 +118,7 @@ texture = ExtResource("2_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart5" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts"]
+[node name="Heart5" type="TextureRect" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/Hearts" unique_id=1141399854]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -126,37 +126,33 @@ texture = ExtResource("2_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="EnergyCaption" type="HBoxContainer" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals"]
+[node name="EnergyCaption" type="HBoxContainer" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals" unique_id=1723957585]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="LanternLabel" type="Label" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/EnergyCaption"]
+[node name="LanternLabel" type="Label" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/EnergyCaption" unique_id=2088243914]
 layout_mode = 2
 size_flags_horizontal = 3
-mouse_filter = 2
-text = "LANTERN"
 theme_override_colors/font_color = Color(0.79, 0.66, 0.43, 1)
 theme_override_font_sizes/font_size = 9
+text = "LANTERN"
 
-[node name="EnergyValue" type="Label" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/EnergyCaption"]
+[node name="EnergyValue" type="Label" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals/EnergyCaption" unique_id=967493114]
 layout_mode = 2
-mouse_filter = 2
 text = "100/100"
 horizontal_alignment = 2
 
-[node name="EnergyBar" type="ProgressBar" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals"]
+[node name="EnergyBar" type="ProgressBar" parent="ScreenRoot/PixelLayout/VitalsPanel/Margin/Vitals" unique_id=1501446279]
 custom_minimum_size = Vector2(144, 7)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_energy_background")
 theme_override_styles/fill = SubResource("StyleBoxFlat_energy_fill")
-min_value = 0.0
-max_value = 100.0
 step = 0.0
 value = 100.0
 show_percentage = false
 
-[node name="FragmentPanel" type="PanelContainer" parent="ScreenRoot/PixelLayout"]
+[node name="FragmentPanel" type="PanelContainer" parent="ScreenRoot/PixelLayout" unique_id=1017910329]
 layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
@@ -166,7 +162,7 @@ grow_horizontal = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="Margin" type="MarginContainer" parent="ScreenRoot/PixelLayout/FragmentPanel"]
+[node name="Margin" type="MarginContainer" parent="ScreenRoot/PixelLayout/FragmentPanel" unique_id=2133230515]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 9
@@ -174,12 +170,12 @@ theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 9
 theme_override_constants/margin_bottom = 6
 
-[node name="Row" type="HBoxContainer" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin"]
+[node name="Row" type="HBoxContainer" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin" unique_id=1294629727]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 7
 
-[node name="FragmentIcon" type="TextureRect" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row"]
+[node name="FragmentIcon" type="TextureRect" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row" unique_id=2040083991]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_vertical = 4
@@ -188,20 +184,18 @@ texture = SubResource("AtlasTexture_fragment")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Caption" type="VBoxContainer" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row"]
+[node name="Caption" type="VBoxContainer" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row" unique_id=1593981145]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="FragmentTitle" type="Label" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row/Caption"]
+[node name="FragmentTitle" type="Label" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row/Caption" unique_id=1007867292]
 layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/font_size = 8
 theme_override_colors/font_color = Color(0.79, 0.66, 0.43, 1)
+theme_override_font_sizes/font_size = 8
 text = "FRAGMENTS"
 
-[node name="FragmentValue" type="Label" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row/Caption"]
+[node name="FragmentValue" type="Label" parent="ScreenRoot/PixelLayout/FragmentPanel/Margin/Row/Caption" unique_id=1787368137]
 layout_mode = 2
-mouse_filter = 2
 theme_override_font_sizes/font_size = 14
 text = "0/3"

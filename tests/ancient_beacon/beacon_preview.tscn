@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/levels/ancient_beacon.tscn" id="1_beacon"]
+[ext_resource type="Script" path="res://tests/ancient_beacon/beacon_preview.gd" id="2_preview"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_feet"]
+radius = 10.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_unshaded"]
+light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.025, 0.03, 0.055, 0.92)
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+
+[node name="BeaconPreview" type="Node2D"]
+script = ExtResource("2_preview")
+
+[node name="AncientBeacon" parent="." instance=ExtResource("1_beacon")]
+
+[node name="TestCharacter" type="CharacterBody2D" parent="."]
+z_index = 10
+collision_layer = 2
+collision_mask = 1
+motion_mode = 1
+
+[node name="FeetCollision" type="CollisionShape2D" parent="TestCharacter"]
+shape = SubResource("CircleShape2D_feet")
+
+[node name="PreviewBody" type="Polygon2D" parent="TestCharacter"]
+material = SubResource("CanvasItemMaterial_unshaded")
+color = Color(0.32, 0.83, 0.86, 1)
+polygon = PackedVector2Array(-9, -18, 9, -18, 10, 4, -10, 4)
+
+[node name="FacingMark" type="Polygon2D" parent="TestCharacter"]
+material = SubResource("CanvasItemMaterial_unshaded")
+color = Color(0.08, 0.14, 0.18, 1)
+polygon = PackedVector2Array(0, -17, 5, -9, -5, -9)
+
+[node name="Camera2D" type="Camera2D" parent="TestCharacter"]
+zoom = Vector2(0.85, 0.85)
+limit_left = 0
+limit_top = 0
+limit_right = 2304
+limit_bottom = 1536
+position_smoothing_enabled = false
+
+[node name="PreviewHUD" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="PanelContainer" parent="PreviewHUD"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 760.0
+offset_bottom = 116.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Instructions" type="Label" parent="PreviewHUD/Panel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "ANCIENT BEACON PREVIEW"

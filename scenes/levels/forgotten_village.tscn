@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bphuq38h3oyy7"]
 
+[ext_resource type="Script" uid="uid://dgtq35mw1ukuc" path="res://scenes/levels/forgotten_village.gd" id="1_0whti"]
 [ext_resource type="Texture2D" uid="uid://cp5ub701dx4ir" path="res://assets/tilesets/village/House_tileset.png" id="1_qmknc"]
 [ext_resource type="Texture2D" uid="uid://dfkf5js5lcsfp" path="res://assets/Tilemap/tilemap_packed.png" id="2_tgb0j"]
 [ext_resource type="Texture2D" uid="uid://gtcqbbesnd58" path="res://assets/tilesets/village/Furniture.png" id="3_08qoc"]
@@ -7,6 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://dxvfk8wxftb6p" path="res://assets/tilesets/forgotten_village/cursed_forest_props.png" id="4_08qoc"]
 [ext_resource type="Texture2D" uid="uid://bcypye8e5qw4s" path="res://assets/tilesets/village/Trees_and_bushes.png" id="5_0whti"]
 [ext_resource type="PackedScene" uid="uid://ced5t5ptscnna" path="res://scenes/environment/sacred_flame_shrine.tscn" id="7_0whti"]
+[ext_resource type="PackedScene" uid="uid://w352e5nawh8v" path="res://scenes/ui/pause_menu.tscn" id="8_08qoc"]
+[ext_resource type="PackedScene" uid="uid://b5m6i5lkr6474" path="res://scenes/ui/setting_menu.tscn" id="10_k1s2c"]
+[ext_resource type="PackedScene" uid="uid://i4ttgkefk3g1" path="res://scenes/player/Player.tscn" id="11_5pid4"]
+[ext_resource type="Script" uid="uid://88m4ruiicndw" path="res://scenes/quests/shrine.gd" id="quest_interaction"]
+[ext_resource type="Script" uid="uid://cuviu1b4m6l71" path="res://scenes/quests/quest_level.gd" id="quest_level"]
+[ext_resource type="PackedScene" path="res://scenes/quests/fragment_shrine.tscn" id="quest_shrine"]
+[ext_resource type="Script" uid="uid://br7e06ptv3rgd" path="res://scenes/quests/forest_interaction.gd" id="village_door"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxc1r"]
 size = Vector2(192, 64)
@@ -198,7 +206,14 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 metadata/_snap_enabled = true
 
+[sub_resource type="CircleShape2D" id="QuestRange"]
+radius = 140.0
+
+[sub_resource type="CircleShape2D" id="VillageDoorRange"]
+radius = 64.0
+
 [node name="ForgottenVillage" type="Node2D" unique_id=1756259141]
+script = ExtResource("1_0whti")
 
 [node name="Ground" type="Node2D" parent="." unique_id=2057425827]
 visible = false
@@ -16851,7 +16866,7 @@ polygon = PackedVector2Array(0, 0, 13, 0, 13, 2, 0, 2)
 position = Vector2(2850, 1210)
 
 [node name="NightLighting" type="CanvasModulate" parent="." unique_id=1120207606]
-color = Color(0.27058825, 0.3019608, 0.4392157, 1)
+color = Color(0.46, 0.5, 0.62, 1)
 
 [node name="VillageLight" type="Node2D" parent="." unique_id=308948562]
 
@@ -16881,3 +16896,93 @@ energy = 0.45
 texture = SubResource("GradientTexture2D_wi6ju")
 texture_scale = 2.0
 metadata/location = "Northern Gate"
+
+[node name="PauseUI" type="CanvasLayer" parent="." unique_id=235599979]
+layer = 2
+
+[node name="PauseMenu" parent="PauseUI" unique_id=188595305 instance=ExtResource("8_08qoc")]
+visible = false
+
+[node name="SettingMenu" parent="PauseUI" unique_id=354016091 instance=ExtResource("10_k1s2c")]
+visible = false
+
+[node name="MobileUI" type="CanvasLayer" parent="." unique_id=281709748]
+
+[node name="PauseButton" type="Button" parent="MobileUI" unique_id=504304749]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_right = -20.0
+offset_bottom = 80.0
+grow_horizontal = 0
+text = "Ⅱ"
+
+[node name="Player" parent="." unique_id=1900737636 instance=ExtResource("11_5pid4")]
+position = Vector2(1728, 1780)
+
+[node name="EchoShrine" parent="." unique_id=1523000761 instance=ExtResource("quest_shrine")]
+position = Vector2(880, 680)
+
+[node name="RemembranceShrine" parent="." unique_id=1303006626 instance=ExtResource("quest_shrine")]
+position = Vector2(1910, 350)
+shrine_id = "memory"
+shrine_title = "Shrine of Remembrance"
+light_color = Color(0.45, 0.85, 0.6, 1)
+
+[node name="SacredFlameInteraction" type="Area2D" parent="." unique_id=186760817]
+position = Vector2(2850, 1150)
+collision_layer = 0
+script = ExtResource("quest_interaction")
+shrine_id = "sacred"
+shrine_title = "Sacred Flame Shrine"
+visual_path = NodePath("../SacredFlameShrine")
+light_color = Color(1, 0.7411765, 0.4, 1)
+light_energy = 1.2
+
+[node name="Range" type="CollisionShape2D" parent="SacredFlameInteraction" unique_id=443292057]
+shape = SubResource("QuestRange")
+
+[node name="ShrineQuest" type="Node2D" parent="." unique_id=536254140]
+script = ExtResource("quest_level")
+
+[node name="WestLaneNorthReturn" type="Marker2D" parent="." unique_id=447842522]
+position = Vector2(770, 488)
+
+[node name="WestLaneNorthEntrance" type="Area2D" parent="." unique_id=58763173]
+position = Vector2(770, 464)
+collision_layer = 0
+script = ExtResource("village_door")
+shrine_title = "Explore abandoned house"
+destination = "res://scenes/quests/village_guardian_sigil_interior.tscn"
+
+[node name="Range" type="CollisionShape2D" parent="WestLaneNorthEntrance" unique_id=1340146305]
+shape = SubResource("VillageDoorRange")
+
+[node name="MainStreetWestReturn" type="Marker2D" parent="." unique_id=1822345512]
+position = Vector2(1420, 1638)
+
+[node name="MainStreetWestEntrance" type="Area2D" parent="." unique_id=1631276655]
+position = Vector2(1420, 1614)
+collision_layer = 0
+script = ExtResource("village_door")
+shrine_title = "Explore abandoned house"
+destination = "res://scenes/quests/village_ember_vial_interior.tscn"
+
+[node name="Range" type="CollisionShape2D" parent="MainStreetWestEntrance" unique_id=1876771540]
+shape = SubResource("VillageDoorRange")
+
+[node name="CourtyardSouthReturn" type="Marker2D" parent="." unique_id=1651737082]
+position = Vector2(2980, 1618)
+
+[node name="CourtyardSouthEntrance" type="Area2D" parent="." unique_id=1646421293]
+position = Vector2(2980, 1594)
+collision_layer = 0
+script = ExtResource("village_door")
+shrine_title = "Explore abandoned house"
+destination = "res://scenes/quests/village_keeper_charm_interior.tscn"
+
+[node name="Range" type="CollisionShape2D" parent="CourtyardSouthEntrance" unique_id=53071736]
+shape = SubResource("VillageDoorRange")
+
+[connection signal="pressed" from="MobileUI/PauseButton" to="." method="_on_pause_button_pressed"]

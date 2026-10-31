@@ -1,0 +1,27 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/enemies/divesh/ShadowWanderer.tscn" id="wanderer"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/divesh/ShadowStalker.tscn" id="stalker"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/divesh/MossBrute.tscn" id="brute"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/divesh/AshImp.tscn" id="imp"]
+
+[node name="BeaconDefenders" type="Node2D"]
+
+[node name="WestWatch" parent="." instance=ExtResource("wanderer")]
+position = Vector2(912, 1020)
+metadata/defense_wave = 0
+[node name="EastWatch" parent="." instance=ExtResource("wanderer")]
+position = Vector2(1392, 1020)
+metadata/defense_wave = 0
+[node name="Vanguard" parent="." instance=ExtResource("imp")]
+position = Vector2(1152, 1080)
+metadata/defense_wave = 0
+[node name="WestClaw" parent="." instance=ExtResource("stalker")]
+position = Vector2(880, 760)
+metadata/defense_wave = 1
+[node name="EastClaw" parent="." instance=ExtResource("imp")]
+position = Vector2(1424, 760)
+metadata/defense_wave = 1
+[node name="AltarGuard" parent="." instance=ExtResource("brute")]
+position = Vector2(1152, 704)
+metadata/defense_wave = 1

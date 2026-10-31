@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bqh0xjwe7gwr2"]
+
+[ext_resource type="PackedScene" uid="uid://cd31uh5xhdo5a" path="res://scenes/levels/whispering_woods.tscn" id="1_woods"]
+[ext_resource type="Script" uid="uid://b3hptgar2pjwa" path="res://tests/whispering_woods/woods_movement_test.gd" id="2_test"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_player"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_unshaded"]
+light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.025, 0.04, 0.06, 0.9)
+
+[node name="WoodsMovementTest" type="Node2D" unique_id=1815760706]
+script = ExtResource("2_test")
+
+[node name="WhisperingWoods" parent="." unique_id=1045295042 instance=ExtResource("1_woods")]
+
+[node name="TestCharacter" type="CharacterBody2D" parent="." unique_id=1607773581]
+z_index = 10
+collision_layer = 2
+motion_mode = 1
+
+[node name="FeetCollision" type="CollisionShape2D" parent="TestCharacter" unique_id=730802981]
+shape = SubResource("CircleShape2D_player")
+
+[node name="PreviewBody" type="Polygon2D" parent="TestCharacter" unique_id=815534940]
+material = SubResource("CanvasItemMaterial_unshaded")
+color = Color(0.32, 0.83, 0.86, 1)
+polygon = PackedVector2Array(-9, -18, 9, -18, 10, 4, -10, 4)
+
+[node name="FacingMark" type="Polygon2D" parent="TestCharacter" unique_id=153074092]
+material = SubResource("CanvasItemMaterial_unshaded")
+color = Color(0.08, 0.14, 0.18, 1)
+polygon = PackedVector2Array(0, -17, 5, -9, -5, -9)
+
+[node name="Camera2D" type="Camera2D" parent="TestCharacter" unique_id=744173177]
+zoom = Vector2(1.25, 1.25)
+limit_left = 0
+limit_top = 0
+limit_right = 2304
+limit_bottom = 1536
+
+[node name="TestHUD" type="CanvasLayer" parent="." unique_id=782226749]
+
+[node name="Panel" type="PanelContainer" parent="TestHUD" unique_id=963437099]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 720.0
+offset_bottom = 94.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
+
+[node name="Instructions" type="Label" parent="TestHUD/Panel" unique_id=1146992417]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "WOODS MOVEMENT TEST"

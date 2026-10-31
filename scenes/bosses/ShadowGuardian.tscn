@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ce41jccfsd2n6"]
+
+[ext_resource type="Script" path="res://scripts/bosses/shadow_guardian.gd" id="1_d4f4l"]
+
+[ext_resource type="Texture2D" path="res://assets/characters/divesh_guardian.png" id="art"]
+
+[sub_resource type="CanvasItemMaterial" id="CharacterMaterial"]
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_v4h7r"]
+offsets = PackedFloat32Array(0.11445783, 0.43975905, 0.79518074)
+colors = PackedColorArray(0.29450798, 0.22931957, 0.9444528, 1, 0, 0, 0, 1, 0.3254902, 0.14901961, 0.6509804, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xgtxa"]
+gradient = SubResource("Gradient_v4h7r")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3et4t"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wave"]
+radius = 230.0
+
+[node name="ShadowGuardian" type="Node2D" unique_id=891101113]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1823269592]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_d4f4l")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=547804052]
+material = SubResource("CharacterMaterial")
+texture = ExtResource("art")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1670481024]
+shape = SubResource("RectangleShape2D_3et4t")
+
+[node name="ShockwaveArea" type="Area2D" parent="CharacterBody2D" unique_id=1960410533]
+collision_layer = 0
+collision_mask = 1
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/ShockwaveArea" unique_id=1740869286]
+shape = SubResource("CircleShape2D_wave")
+
+[node name="Hurtbox" type="Area2D" parent="CharacterBody2D" groups=["enemy_hurtbox"]]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Hurtbox"]
+shape = SubResource("RectangleShape2D_3et4t")

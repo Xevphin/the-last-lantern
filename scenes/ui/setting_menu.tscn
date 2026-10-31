@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://b5m6i5lkr6474"]
+
+[ext_resource type="Script" uid="uid://dtd2ij0rrl5i8" path="res://scenes/ui/setting_menu.gd" id="1_xbl1u"]
+
+[sub_resource type="Gradient" id="Gradient_qbobj"]
+colors = PackedColorArray(0.9098039, 0.78039217, 0.49019608, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_63sl1"]
+gradient = SubResource("Gradient_qbobj")
+width = 36
+height = 36
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="SettingMenu" type="Control" unique_id=354016091]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xbl1u")
+
+[node name="SettingTitle" type="Label" parent="." unique_id=513423396]
+layout_mode = 0
+offset_top = 65.0
+offset_right = 1152.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_font_sizes/font_size = 48
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1568770729]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 260.0
+offset_right = 776.0
+offset_bottom = 310.0
+theme_override_icons/grabber = SubResource("GradientTexture2D_63sl1")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_63sl1")
+value = 75.0
+
+[node name="SFXSlider" type="HSlider" parent="." unique_id=2103696036]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 400.0
+offset_right = 776.0
+offset_bottom = 450.0
+theme_override_icons/grabber = SubResource("GradientTexture2D_63sl1")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_63sl1")
+value = 75.0
+
+[node name="MusicLabel" type="Label" parent="." unique_id=342054525]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 205.0
+offset_right = 776.0
+offset_bottom = 280.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_font_sizes/font_size = 26
+text = "MUSIC VOLUME
+"
+horizontal_alignment = 1
+
+[node name="SFXLabel" type="Label" parent="." unique_id=1769478024]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 345.0
+offset_right = 776.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_font_sizes/font_size = 26
+text = "Sound EFFECTS
+"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=963201264]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 520.0
+offset_right = 676.0
+offset_bottom = 580.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8509804, 0.5411765, 1)
+theme_override_font_sizes/font_size = 26
+text = "BACK
+"
+
+[node name="MusicPercentageLabel" type="Label" parent="." unique_id=149756579]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 260.0
+offset_right = 890.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_font_sizes/font_size = 24
+text = "75%"
+vertical_alignment = 1
+
+[node name="SFXPercentageLabel" type="Label" parent="." unique_id=1951987915]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 400.0
+offset_right = 890.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_font_sizes/font_size = 24
+text = "75%"
+vertical_alignment = 1
+
+[connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

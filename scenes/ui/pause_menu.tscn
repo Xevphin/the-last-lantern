@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://w352e5nawh8v"]
+
+[ext_resource type="Script" uid="uid://b4m40dwr2hyc8" path="res://scenes/ui/pause_menu.gd" id="1_6tw0m"]
+
+[node name="PauseMenu" type="Control" unique_id=188595305]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tw0m")
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=2086462256]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="PauseTitle" type="Label" parent="." unique_id=1919808400]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 140.0
+offset_right = 776.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_font_sizes/font_size = 42
+text = "GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="." unique_id=838826491]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 270.0
+offset_right = 676.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8509804, 0.5411765, 1)
+theme_override_font_sizes/font_size = 26
+text = "RESUME"
+
+[node name="SettingButton" type="Button" parent="." unique_id=2051290852]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 350.0
+offset_right = 676.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8509804, 0.5411765, 1)
+theme_override_font_sizes/font_size = 26
+text = "SETTINGS"
+
+[node name="MainMenuButton" type="Button" parent="." unique_id=718031420]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 430.0
+offset_right = 676.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(0.9098039, 0.78039217, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8509804, 0.5411765, 1)
+theme_override_font_sizes/font_size = 26
+text = "MAIN MENU"
+
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]

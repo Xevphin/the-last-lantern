@@ -5,6 +5,18 @@
 [ext_resource type="Texture2D" uid="uid://dxvfk8wxftb6p" path="res://assets/tilesets/forgotten_village/cursed_forest_props.png" id="3_qtlpi"]
 [ext_resource type="PackedScene" uid="uid://ced5t5ptscnna" path="res://scenes/environment/sacred_flame_shrine.tscn" id="4_scc2o"]
 
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="game_2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="game_3"]
+[ext_resource type="PackedScene" path="res://scenes/ui/setting_menu.tscn" id="game_4"]
+[ext_resource type="Script" path="res://scenes/quests/forest_quest_level.gd" id="game_5"]
+[ext_resource type="Script" path="res://scenes/levels/forgotten_village.gd" id="game_6"]
+[ext_resource type="Script" path="res://scenes/quests/forest_interaction.gd" id="interaction"]
+[ext_resource type="PackedScene" path="res://scenes/quests/forest_house.tscn" id="forest_house"]
+[ext_resource type="PackedScene" path="res://scenes/quests/forest_trails.tscn" id="polished_trails"]
+[ext_resource type="Script" path="res://scenes/quests/forest_mist.gd" id="forest_mist"]
+[ext_resource type="Script" path="res://scenes/quests/forest_shrine.gd" id="forest_shrine"]
+[sub_resource type="CircleShape2D" id="ForestRange"]
+radius = 64.0
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rrucf"]
 texture = ExtResource("1_xxgip")
 0:0/0 = 0
@@ -270,7 +282,56 @@ _data = {
 &"uncollected": SubResource("Animation_ophcm")
 }
 
+[sub_resource type="RectangleShape2D" id="PocketThicket_0"]
+size = Vector2(112.0,32.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_1"]
+size = Vector2(928.0,224.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_2"]
+size = Vector2(192.0,224.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_3"]
+size = Vector2(928.0,32.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_4"]
+size = Vector2(1088.0,192.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_5"]
+size = Vector2(928.0,128.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_6"]
+size = Vector2(832.0,48.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_7"]
+size = Vector2(112.0,144.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_8"]
+size = Vector2(336.0,144.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_9"]
+size = Vector2(112.0,64.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_10"]
+size = Vector2(240.0,64.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_11"]
+size = Vector2(112.0,32.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_12"]
+size = Vector2(16.0,32.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_13"]
+size = Vector2(448.0,320.0)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_14"]
+size = Vector2(304.0,32)
+
+[sub_resource type="RectangleShape2D" id="PocketThicket_15"]
+size = Vector2(112.0,96.0)
+
 [node name="WhisperingWoods" type="Node2D" unique_id=106236788]
+script = ExtResource("game_6")
 texture_filter = 1
 metadata/map_size = Vector2i(2304, 1536)
 metadata/integration_note = "Environment only. Markers reserve spawn, exit, encounter and fragment positions. No transitions, enemies or collection logic."
@@ -522,84 +583,6 @@ texture = ExtResource("2_bg4n7")
 centered = false
 region_enabled = true
 region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_011" type="Node2D" parent="Forest" unique_id=1281073722]
-position = Vector2(935, 98)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_011" unique_id=1377702534]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_012" type="Node2D" parent="Forest" unique_id=1765167847]
-position = Vector2(1011, 108)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_012" unique_id=1523057630]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_013" type="Node2D" parent="Forest" unique_id=718511071]
-position = Vector2(1070, 82)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_013" unique_id=804010233]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_014" type="Node2D" parent="Forest" unique_id=2116592175]
-position = Vector2(1166, 111)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_014" unique_id=157460915]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_015" type="Node2D" parent="Forest" unique_id=400115509]
-position = Vector2(1229, 103)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_015" unique_id=514654024]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_016" type="Node2D" parent="Forest" unique_id=939022757]
-position = Vector2(1324, 99)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_016" unique_id=1418782753]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="BackgroundTree_017" type="Node2D" parent="Forest" unique_id=2070785897]
@@ -862,84 +845,6 @@ region_enabled = true
 region_rect = Rect2(64, 0, 64, 80)
 region_filter_clip_enabled = true
 
-[node name="BackgroundTree_037" type="Node2D" parent="Forest" unique_id=632302851]
-position = Vector2(941, 183)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_037" unique_id=1807361099]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_038" type="Node2D" parent="Forest" unique_id=490855254]
-position = Vector2(1027, 186)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_038" unique_id=979539404]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_039" type="Node2D" parent="Forest" unique_id=817906512]
-position = Vector2(1106, 161)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_039" unique_id=1353666247]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_040" type="Node2D" parent="Forest" unique_id=611270936]
-position = Vector2(1169, 184)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_040" unique_id=718192751]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_041" type="Node2D" parent="Forest" unique_id=2011117013]
-position = Vector2(1260, 164)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_041" unique_id=1897374522]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_042" type="Node2D" parent="Forest" unique_id=1864136663]
-position = Vector2(1310, 175)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_042" unique_id=907797871]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
 [node name="BackgroundTree_043" type="Node2D" parent="Forest" unique_id=1421055686]
 position = Vector2(1404, 189)
 
@@ -1198,84 +1103,6 @@ texture = ExtResource("2_bg4n7")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_063" type="Node2D" parent="Forest" unique_id=1436535052]
-position = Vector2(934, 247)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_063" unique_id=1839495239]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_064" type="Node2D" parent="Forest" unique_id=1001709112]
-position = Vector2(1017, 262)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_064" unique_id=1119355454]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_065" type="Node2D" parent="Forest" unique_id=753274432]
-position = Vector2(1069, 259)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_065" unique_id=1860804765]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_066" type="Node2D" parent="Forest" unique_id=1555855025]
-position = Vector2(1156, 253)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_066" unique_id=1726970865]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_067" type="Node2D" parent="Forest" unique_id=657979574]
-position = Vector2(1250, 257)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_067" unique_id=1354627522]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_068" type="Node2D" parent="Forest" unique_id=1258625966]
-position = Vector2(1339, 266)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_068" unique_id=52402876]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="BackgroundTree_069" type="Node2D" parent="Forest" unique_id=1060955840]
@@ -1538,45 +1365,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 64, 80)
 region_filter_clip_enabled = true
 
-[node name="BackgroundTree_089" type="Node2D" parent="Forest" unique_id=1307675007]
-position = Vector2(945, 326)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_089" unique_id=1298856158]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_090" type="Node2D" parent="Forest" unique_id=1223062811]
-position = Vector2(1018, 342)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_090" unique_id=592035125]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_091" type="Node2D" parent="Forest" unique_id=1435588709]
-position = Vector2(1090, 336)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_091" unique_id=1361680247]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
 [node name="BackgroundTree_092" type="Node2D" parent="Forest" unique_id=272653995]
 position = Vector2(1790, 325)
 
@@ -1811,45 +1599,6 @@ region_enabled = true
 region_rect = Rect2(96, 0, 48, 64)
 region_filter_clip_enabled = true
 
-[node name="BackgroundTree_110" type="Node2D" parent="Forest" unique_id=985521017]
-position = Vector2(936, 420)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_110" unique_id=625968684]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_111" type="Node2D" parent="Forest" unique_id=574792370]
-position = Vector2(993, 405)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_111" unique_id=1854488639]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_112" type="Node2D" parent="Forest" unique_id=71708098]
-position = Vector2(1098, 421)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_112" unique_id=1071035507]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
 [node name="BackgroundTree_113" type="Node2D" parent="Forest" unique_id=1561059787]
 position = Vector2(1796, 407)
 
@@ -2082,45 +1831,6 @@ texture = ExtResource("3_qtlpi")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_131" type="Node2D" parent="Forest" unique_id=1855425564]
-position = Vector2(938, 491)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_131" unique_id=1079604318]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_132" type="Node2D" parent="Forest" unique_id=314559202]
-position = Vector2(1011, 505)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_132" unique_id=118791120]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_133" type="Node2D" parent="Forest" unique_id=2010031862]
-position = Vector2(1098, 508)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_133" unique_id=62094693]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="BackgroundTree_134" type="Node2D" parent="Forest" unique_id=287683464]
@@ -2955,71 +2665,6 @@ region_enabled = true
 region_rect = Rect2(48, 0, 48, 64)
 region_filter_clip_enabled = true
 
-[node name="BackgroundTree_198" type="Node2D" parent="Forest" unique_id=259332653]
-position = Vector2(137, 809)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_198" unique_id=1366694442]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_199" type="Node2D" parent="Forest" unique_id=717881502]
-position = Vector2(227, 812)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_199" unique_id=1898204481]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_200" type="Node2D" parent="Forest" unique_id=755848094]
-position = Vector2(273, 802)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_200" unique_id=711284194]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_201" type="Node2D" parent="Forest" unique_id=635699797]
-position = Vector2(357, 824)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_201" unique_id=612506555]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_202" type="Node2D" parent="Forest" unique_id=2034302401]
-position = Vector2(434, 814)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_202" unique_id=1866597171]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
 [node name="BackgroundTree_203" type="Node2D" parent="Forest" unique_id=1375505781]
 position = Vector2(544, 805)
 
@@ -3109,84 +2754,6 @@ texture = ExtResource("2_bg4n7")
 centered = false
 region_enabled = true
 region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_210" type="Node2D" parent="Forest" unique_id=897189508]
-position = Vector2(140, 910)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_210" unique_id=858236066]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_211" type="Node2D" parent="Forest" unique_id=150546151]
-position = Vector2(217, 911)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_211" unique_id=2037207012]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_212" type="Node2D" parent="Forest" unique_id=1612692099]
-position = Vector2(290, 897)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_212" unique_id=1530906490]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_213" type="Node2D" parent="Forest" unique_id=2066262710]
-position = Vector2(362, 904)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_213" unique_id=1330246496]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_214" type="Node2D" parent="Forest" unique_id=1508922672]
-position = Vector2(436, 895)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_214" unique_id=148609449]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_215" type="Node2D" parent="Forest" unique_id=1756024626]
-position = Vector2(515, 910)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_215" unique_id=215036626]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="BackgroundTree_216" type="Node2D" parent="Forest" unique_id=891353667]
@@ -3317,71 +2884,6 @@ texture = ExtResource("2_bg4n7")
 centered = false
 region_enabled = true
 region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_226" type="Node2D" parent="Forest" unique_id=1076160912]
-position = Vector2(142, 973)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_226" unique_id=90304957]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_227" type="Node2D" parent="Forest" unique_id=1161076057]
-position = Vector2(212, 991)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_227" unique_id=404265569]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_228" type="Node2D" parent="Forest" unique_id=1286019514]
-position = Vector2(304, 977)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_228" unique_id=1887784557]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_229" type="Node2D" parent="Forest" unique_id=971640954]
-position = Vector2(380, 964)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_229" unique_id=993117036]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_230" type="Node2D" parent="Forest" unique_id=984082390]
-position = Vector2(449, 968)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_230" unique_id=673890331]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="BackgroundTree_231" type="Node2D" parent="Forest" unique_id=2007176198]
@@ -3618,71 +3120,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 48, 64)
 region_filter_clip_enabled = true
 
-[node name="BackgroundTree_249" type="Node2D" parent="Forest" unique_id=487957814]
-position = Vector2(125, 1046)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_249" unique_id=21309305]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_250" type="Node2D" parent="Forest" unique_id=1905765360]
-position = Vector2(228, 1059)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_250" unique_id=1868692232]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_251" type="Node2D" parent="Forest" unique_id=1799893600]
-position = Vector2(305, 1071)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_251" unique_id=1710516324]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_252" type="Node2D" parent="Forest" unique_id=220774517]
-position = Vector2(362, 1049)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_252" unique_id=2131245563]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_253" type="Node2D" parent="Forest" unique_id=321992440]
-position = Vector2(440, 1048)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_253" unique_id=219472502]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
 [node name="BackgroundTree_254" type="Node2D" parent="Forest" unique_id=2146736825]
 position = Vector2(1267, 1068)
 
@@ -3869,71 +3306,6 @@ region_filter_clip_enabled = true
 position = Vector2(33, 1145)
 
 [node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_268" unique_id=1372712917]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_269" type="Node2D" parent="Forest" unique_id=206865910]
-position = Vector2(128, 1124)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_269" unique_id=512937765]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_270" type="Node2D" parent="Forest" unique_id=182005409]
-position = Vector2(227, 1141)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_270" unique_id=364897666]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_271" type="Node2D" parent="Forest" unique_id=1928806392]
-position = Vector2(274, 1121)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_271" unique_id=600188964]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_272" type="Node2D" parent="Forest" unique_id=43560152]
-position = Vector2(388, 1147)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_272" unique_id=1304288714]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_273" type="Node2D" parent="Forest" unique_id=849611385]
-position = Vector2(429, 1135)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_273" unique_id=2069123171]
 modulate = Color(0.54, 0.62, 0.51, 1)
 position = Vector2(-48, -112)
 scale = Vector2(2, 2)
@@ -4136,58 +3508,6 @@ texture = ExtResource("2_bg4n7")
 centered = false
 region_enabled = true
 region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_289" type="Node2D" parent="Forest" unique_id=1383217032]
-position = Vector2(121, 1209)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_289" unique_id=1795029841]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_290" type="Node2D" parent="Forest" unique_id=959176716]
-position = Vector2(204, 1204)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_290" unique_id=1791765892]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_291" type="Node2D" parent="Forest" unique_id=1784409810]
-position = Vector2(308, 1231)
-
-[node name="DeadTree" type="Sprite2D" parent="Forest/BackgroundTree_291" unique_id=1048013104]
-modulate = Color(0.67, 0.68, 0.62, 1)
-position = Vector2(-64, -150)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="BackgroundTree_292" type="Node2D" parent="Forest" unique_id=1421673159]
-position = Vector2(350, 1220)
-
-[node name="Canopy" type="Sprite2D" parent="Forest/BackgroundTree_292" unique_id=1933778887]
-modulate = Color(0.54, 0.62, 0.51, 1)
-position = Vector2(-48, -112)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(96, 0, 48, 64)
 region_filter_clip_enabled = true
 
 [node name="BackgroundTree_293" type="Node2D" parent="Forest" unique_id=258820646]
@@ -5375,19 +4695,6 @@ z_index = -2
 color = Color(0.11, 0.18, 0.15, 1)
 polygon = PackedVector2Array(-272, -32, 272, -32, 272, 32, -272, 32)
 
-[node name="Thicket_001" type="StaticBody2D" parent="Boundaries" unique_id=715410159]
-position = Vector2(240, 1040)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_001" unique_id=653285500]
-shape = SubResource("RectangleShape2D_rxaom")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_001" unique_id=1589076504]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-240, -16, 240, -16, 240, 16, -240, 16)
-
 [node name="Thicket_002" type="StaticBody2D" parent="Boundaries" unique_id=295686063]
 position = Vector2(768, 32)
 collision_mask = 0
@@ -5414,19 +4721,6 @@ z_index = -2
 color = Color(0.11, 0.18, 0.15, 1)
 polygon = PackedVector2Array(-272, -48, 272, -48, 272, 48, -272, 48)
 
-[node name="Thicket_004" type="StaticBody2D" parent="Boundaries" unique_id=1730242855]
-position = Vector2(752, 176)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_004" unique_id=362968638]
-shape = SubResource("RectangleShape2D_cvity")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_004" unique_id=273818224]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-752, -112, 752, -112, 752, 112, -752, 112)
-
 [node name="Thicket_005" type="StaticBody2D" parent="Boundaries" unique_id=1351316953]
 position = Vector2(2048, 240)
 collision_mask = 0
@@ -5439,32 +4733,6 @@ shape = SubResource("RectangleShape2D_augwh")
 z_index = -2
 color = Color(0.11, 0.18, 0.15, 1)
 polygon = PackedVector2Array(-256, -176, 256, -176, 256, 176, -256, 176)
-
-[node name="Thicket_006" type="StaticBody2D" parent="Boundaries" unique_id=1690781653]
-position = Vector2(640, 304)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_006" unique_id=1528598370]
-shape = SubResource("RectangleShape2D_avr4v")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_006" unique_id=115960143]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-640, -16, 640, -16, 640, 16, -640, 16)
-
-[node name="Thicket_007" type="StaticBody2D" parent="Boundaries" unique_id=1394241684]
-position = Vector2(544, 480)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_007" unique_id=1445400622]
-shape = SubResource("RectangleShape2D_lg841")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_007" unique_id=1001038400]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-544, -160, 544, -160, 544, 160, -544, 160)
 
 [node name="Thicket_008" type="StaticBody2D" parent="Boundaries" unique_id=1801426896]
 position = Vector2(2000, 528)
@@ -5557,19 +4825,6 @@ z_index = -2
 color = Color(0.11, 0.18, 0.15, 1)
 polygon = PackedVector2Array(-432, -32, 432, -32, 432, 32, -432, 32)
 
-[node name="Thicket_015" type="StaticBody2D" parent="Boundaries" unique_id=1844071775]
-position = Vector2(416, 832)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_015" unique_id=515542255]
-shape = SubResource("RectangleShape2D_m2gp4")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_015" unique_id=630641982]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-416, -96, 416, -96, 416, 96, -416, 96)
-
 [node name="Thicket_016" type="StaticBody2D" parent="Boundaries" unique_id=840705895]
 position = Vector2(1584, 880)
 collision_mask = 0
@@ -5595,19 +4850,6 @@ shape = SubResource("RectangleShape2D_krto3")
 z_index = -2
 color = Color(0.11, 0.18, 0.15, 1)
 polygon = PackedVector2Array(-208, -16, 208, -16, 208, 16, -208, 16)
-
-[node name="Thicket_018" type="StaticBody2D" parent="Boundaries" unique_id=1091393135]
-position = Vector2(368, 960)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_018" unique_id=716249206]
-shape = SubResource("RectangleShape2D_4fu67")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_018" unique_id=1510184869]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-368, -32, 368, -32, 368, 32, -368, 32)
 
 [node name="Thicket_019" type="StaticBody2D" parent="Boundaries" unique_id=1055239557]
 position = Vector2(1472, 944)
@@ -5635,19 +4877,6 @@ z_index = -2
 color = Color(0.11, 0.18, 0.15, 1)
 polygon = PackedVector2Array(-560, -144, 560, -144, 560, 144, -560, 144)
 
-[node name="Thicket_021" type="StaticBody2D" parent="Boundaries" unique_id=1658988659]
-position = Vector2(256, 1008)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_021" unique_id=1254684259]
-shape = SubResource("RectangleShape2D_oxosj")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_021" unique_id=1812338560]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-256, -16, 256, -16, 256, 16, -256, 16)
-
 [node name="Thicket_022" type="StaticBody2D" parent="Boundaries" unique_id=411868123]
 position = Vector2(240, 1520)
 collision_mask = 0
@@ -5660,19 +4889,6 @@ shape = SubResource("RectangleShape2D_n2n5c")
 z_index = -2
 color = Color(0.11, 0.18, 0.15, 1)
 polygon = PackedVector2Array(-240, -16, 240, -16, 240, 16, -240, 16)
-
-[node name="Thicket_023" type="StaticBody2D" parent="Boundaries" unique_id=534618239]
-position = Vector2(224, 1280)
-collision_mask = 0
-metadata/purpose = "Inaccessible dense forest. Matches dark ground and clustered trees; keep outside walkable apron."
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Thicket_023" unique_id=2144023061]
-shape = SubResource("RectangleShape2D_xylxu")
-
-[node name="DenseUnderbrush" type="Polygon2D" parent="Boundaries/Thicket_023" unique_id=329227972]
-z_index = -2
-color = Color(0.11, 0.18, 0.15, 1)
-polygon = PackedVector2Array(-224, -224, 224, -224, 224, 224, -224, 224)
 
 [node name="Thicket_024" type="StaticBody2D" parent="Boundaries" unique_id=1503202956]
 position = Vector2(1504, 1376)
@@ -5716,40 +4932,6 @@ shape = SubResource("RectangleShape2D_2u0lm")
 
 [node name="Obstacles" type="Node2D" parent="." unique_id=1833720628]
 y_sort_enabled = true
-
-[node name="ReachableTree_00" type="StaticBody2D" parent="Obstacles" unique_id=1468356538]
-position = Vector2(448, 1264)
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/ReachableTree_00" unique_id=2057122544]
-shape = SubResource("RectangleShape2D_5vqlx")
-
-[node name="DeadTree" type="Sprite2D" parent="Obstacles/ReachableTree_00" unique_id=2058534954]
-modulate = Color(0.67, 0.69, 0.62, 1)
-position = Vector2(-64, -144)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
-region_filter_clip_enabled = true
-
-[node name="ReachableTree_01" type="StaticBody2D" parent="Obstacles" unique_id=949351979]
-position = Vector2(704, 1264)
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/ReachableTree_01" unique_id=1498583807]
-shape = SubResource("RectangleShape2D_e4d1a")
-
-[node name="Canopy" type="Sprite2D" parent="Obstacles/ReachableTree_01" unique_id=976584178]
-modulate = Color(0.59, 0.64, 0.52, 1)
-position = Vector2(-48, -108)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bg4n7")
-centered = false
-region_enabled = true
-region_rect = Rect2(48, 0, 48, 64)
-region_filter_clip_enabled = true
 
 [node name="ReachableTree_02" type="StaticBody2D" parent="Obstacles" unique_id=704302524]
 position = Vector2(736, 1008)
@@ -5817,23 +4999,6 @@ texture = ExtResource("2_bg4n7")
 centered = false
 region_enabled = true
 region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="ReachableTree_06" type="StaticBody2D" parent="Obstacles" unique_id=89655440]
-position = Vector2(1104, 400)
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/ReachableTree_06" unique_id=1485939082]
-shape = SubResource("RectangleShape2D_o7yq2")
-
-[node name="DeadTree" type="Sprite2D" parent="Obstacles/ReachableTree_06" unique_id=1829419669]
-modulate = Color(0.67, 0.69, 0.62, 1)
-position = Vector2(-64, -144)
-scale = Vector2(2, 2)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 80)
 region_filter_clip_enabled = true
 
 [node name="ReachableTree_07" type="StaticBody2D" parent="Obstacles" unique_id=1572890849]
@@ -5919,22 +5084,6 @@ texture = ExtResource("2_bg4n7")
 centered = false
 region_enabled = true
 region_rect = Rect2(96, 0, 48, 64)
-region_filter_clip_enabled = true
-
-[node name="FallenProp_00" type="StaticBody2D" parent="Obstacles" unique_id=119545377]
-position = Vector2(784, 1232)
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/FallenProp_00" unique_id=345337203]
-shape = SubResource("RectangleShape2D_cxfo8")
-
-[node name="Log" type="Sprite2D" parent="Obstacles/FallenProp_00" unique_id=1126138841]
-modulate = Color(0.75, 0.78, 0.68, 1)
-position = Vector2(-32, -22)
-texture = ExtResource("3_qtlpi")
-centered = false
-region_enabled = true
-region_rect = Rect2(64, 96, 64, 32)
 region_filter_clip_enabled = true
 
 [node name="FallenProp_01" type="StaticBody2D" parent="Obstacles" unique_id=248316600]
@@ -6055,4 +5204,169 @@ position = Vector2(576, 1464)
 [node name="NightLighting" type="CanvasModulate" parent="." unique_id=1078086544]
 color = Color(0.42, 0.48, 0.58, 1)
 
+[node name="Player" parent="." instance=ExtResource("game_2")]
+[node name="PauseUI" type="CanvasLayer" parent="."]
+layer = 2
+[node name="PauseMenu" parent="PauseUI" instance=ExtResource("game_3")]
+visible = false
+[node name="SettingMenu" parent="PauseUI" instance=ExtResource("game_4")]
+visible = false
+[node name="MobileUI" type="CanvasLayer" parent="."]
+[node name="PauseButton" type="Button" parent="MobileUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_right = -20.0
+offset_bottom = 80.0
+text = "Ⅱ"
+[node name="Quest" type="Node2D" parent="."]
+script = ExtResource("game_5")
+area = "forest"
+[node name="HuntersLodge" parent="." instance=ExtResource("forest_house")]
+position = Vector2(304,944)
+[node name="HuntersLodgeReturn" type="Marker2D" parent="."]
+position = Vector2(304,1032)
+[node name="KeepersHouse" parent="." instance=ExtResource("forest_house")]
+position = Vector2(1120,224)
+modulate = Color(0.82,0.94,0.85,1)
+[node name="KeepersHouseReturn" type="Marker2D" parent="."]
+position = Vector2(1120,312)
+[node name="HunterEntrance" type="Area2D" parent="."]
+position = Vector2(304,1016)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("interaction")
+shrine_title = "Enter Hunter's Lodge"
+kind = "door"
+destination = "res://scenes/quests/hunters_lodge_interior.tscn"
+arrival_marker = ""
+[node name="Range" type="CollisionShape2D" parent="HunterEntrance"]
+shape = SubResource("ForestRange")
+[node name="KeeperEntrance" type="Area2D" parent="."]
+position = Vector2(1120,296)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("interaction")
+shrine_title = "Enter Keeper's House"
+kind = "door"
+destination = "res://scenes/quests/keepers_house_interior.tscn"
+arrival_marker = ""
+[node name="Range" type="CollisionShape2D" parent="KeeperEntrance"]
+shape = SubResource("ForestRange")
+[node name="VillageExit" type="Area2D" parent="."]
+position = Vector2(576,1464)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("interaction")
+shrine_title = "Return to Forgotten Village"
+kind = "village"
+destination = "res://scenes/levels/forgotten_village.tscn"
+arrival_marker = ""
+[node name="Range" type="CollisionShape2D" parent="VillageExit"]
+shape = SubResource("ForestRange")
+[node name="BeaconExit" type="Area2D" parent="."]
+position = Vector2(1648,112)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("interaction")
+shrine_title = "Travel to Ancient Beacon"
+kind = "beacon"
+destination = "res://scenes/levels/ancient_beacon.tscn"
+arrival_marker = ""
+[node name="Range" type="CollisionShape2D" parent="BeaconExit"]
+shape = SubResource("ForestRange")
+[node name="BeaconReturn" type="Marker2D" parent="."]
+position = Vector2(1648,192)
+[node name="PocketThicket_0" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(56.0,1040.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_0"]
+shape = SubResource("PocketThicket_0")
+[node name="PocketThicket_1" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(464.0,176.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_1"]
+shape = SubResource("PocketThicket_1")
+[node name="PocketThicket_2" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(1408.0,176.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_2"]
+shape = SubResource("PocketThicket_2")
+[node name="PocketThicket_3" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(464.0,304.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_3"]
+shape = SubResource("PocketThicket_3")
+[node name="PocketThicket_4" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(544.0,544.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_4"]
+shape = SubResource("PocketThicket_4")
+[node name="PocketThicket_5" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(464.0,384.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_5"]
+shape = SubResource("PocketThicket_5")
+[node name="PocketThicket_6" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(416.0,760.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_6"]
+shape = SubResource("PocketThicket_6")
+[node name="PocketThicket_7" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(56.0,856.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_7"]
+shape = SubResource("PocketThicket_7")
+[node name="PocketThicket_8" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(664.0,856.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_8"]
+shape = SubResource("PocketThicket_8")
+[node name="PocketThicket_9" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(56.0,960.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_9"]
+shape = SubResource("PocketThicket_9")
+[node name="PocketThicket_10" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(616.0,960.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_10"]
+shape = SubResource("PocketThicket_10")
+[node name="PocketThicket_11" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(56.0,1008.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_11"]
+shape = SubResource("PocketThicket_11")
+[node name="PocketThicket_12" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(504.0,1008.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_12"]
+shape = SubResource("PocketThicket_12")
+[node name="PocketThicket_13" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(224.0,1344.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_13"]
+shape = SubResource("PocketThicket_13")
+[node name="PocketThicket_14" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(152.0,1168.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_14"]
+shape = SubResource("PocketThicket_14")
+[node name="PocketThicket_15" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(56.0,1104.0)
+collision_mask = 0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/PocketThicket_15"]
+shape = SubResource("PocketThicket_15")
+[node name="HouseTrails" parent="Ground" instance=ExtResource("polished_trails")]
+[node name="ForestMist" type="Node2D" parent="."]
+script = ExtResource("forest_mist")
+[node name="ForestShrineInteraction" type="Area2D" parent="."]
+position = Vector2(1984,736)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("forest_shrine")
+shrine_title = "Restore Forest Shrine"
+[node name="Range" type="CollisionShape2D" parent="ForestShrineInteraction"]
+shape = SubResource("ForestRange")
+[connection signal="pressed" from="MobileUI/PauseButton" to="." method="_on_pause_button_pressed"]
 [editable path="SacredFlameShrine"]

@@ -1,3 +1,9 @@
+> Integration update: this original scene is now the canonical playable forest.
+> See `res://scenes/quests/FOREST_INTEGRATION.md` for current house objectives,
+> transitions and F5 testing. The environment-only notes below describe its
+> original design. The old movement preview is retained unchanged and is not
+> the gameplay entry point.
+
 # Whispering Woods
 
 Environment scene: `res://scenes/levels/whispering_woods.tscn`

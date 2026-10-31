@@ -1,0 +1,5 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/lantern/lantern_burst.gd" id="1_burst"]
+[node name="LanternBurst" type="Node2D"]
+script = ExtResource("1_burst")
+z_index = 2

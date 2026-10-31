@@ -9,3 +9,7 @@
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Local safety snapshot and generated validation evidence
+.delivery-backup/
+tests/progression/reports/

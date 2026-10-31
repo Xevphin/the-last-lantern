@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cp5ub701dx4ir" path="res://assets/tilesets/village/House_tileset.png" id="1_seo3n"]
 [ext_resource type="Texture2D" uid="uid://dfkf5js5lcsfp" path="res://assets/Tilemap/tilemap_packed.png" id="2_2006j"]
+[ext_resource type="PackedScene" uid="uid://i4ttgkefk3g1" path="res://scenes/player/Player.tscn" id="game_2"]
+[ext_resource type="PackedScene" uid="uid://w352e5nawh8v" path="res://scenes/ui/pause_menu.tscn" id="game_3"]
+[ext_resource type="PackedScene" uid="uid://b5m6i5lkr6474" path="res://scenes/ui/setting_menu.tscn" id="game_4"]
+[ext_resource type="Script" uid="uid://bg6hagevdoueb" path="res://scenes/quests/forest_quest_level.gd" id="game_5"]
+[ext_resource type="Script" uid="uid://dgtq35mw1ukuc" path="res://scenes/levels/forgotten_village.gd" id="game_6"]
+[ext_resource type="Script" uid="uid://br7e06ptv3rgd" path="res://scenes/quests/forest_interaction.gd" id="interaction"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t80pw"]
 texture = ExtResource("1_seo3n")
@@ -322,8 +328,12 @@ _data = {
 &"restored": SubResource("Animation_gr6tr")
 }
 
+[sub_resource type="CircleShape2D" id="ForestRange"]
+radius = 64.0
+
 [node name="AncientBeacon" type="Node2D" unique_id=1089093651]
 texture_filter = 1
+script = ExtResource("game_6")
 metadata/map_size = Vector2i(2304, 1536)
 metadata/boss_arena = Rect2(512, 320, 1280, 800)
 metadata/integration_note = "Environment and restoration visuals only. Marker positions are reserved for the team's player, boss, collectible and transition systems."
@@ -4271,3 +4281,42 @@ metadata/purpose = "Reachable interaction point south of the altar; fragment log
 [node name="BeaconCore" type="Marker2D" parent="." unique_id=1947723486]
 position = Vector2(1152, 496)
 metadata/purpose = "Elevated visual anchor above the pedestal, not an interaction or player spawn point."
+
+[node name="Player" parent="." unique_id=2062479532 instance=ExtResource("game_2")]
+
+[node name="PauseUI" type="CanvasLayer" parent="." unique_id=2067235432]
+layer = 2
+
+[node name="PauseMenu" parent="PauseUI" unique_id=220556511 instance=ExtResource("game_3")]
+visible = false
+
+[node name="SettingMenu" parent="PauseUI" unique_id=738818779 instance=ExtResource("game_4")]
+visible = false
+
+[node name="MobileUI" type="CanvasLayer" parent="." unique_id=199600754]
+
+[node name="PauseButton" type="Button" parent="MobileUI" unique_id=1311980393]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_right = -20.0
+offset_bottom = 80.0
+text = "Ⅱ"
+
+[node name="Quest" type="Node2D" parent="." unique_id=1782290203]
+script = ExtResource("game_5")
+area = "beacon"
+
+[node name="WoodsReturn" type="Area2D" parent="." unique_id=1245887414]
+position = Vector2(1152, 1460)
+collision_layer = 0
+script = ExtResource("interaction")
+shrine_title = "Return to Whispering Woods"
+destination = "res://scenes/levels/whispering_woods.tscn"
+arrival_marker = "BeaconReturn"
+
+[node name="Range" type="CollisionShape2D" parent="WoodsReturn" unique_id=1041937255]
+shape = SubResource("ForestRange")
+
+[connection signal="pressed" from="MobileUI/PauseButton" to="." method="_on_pause_button_pressed"]
